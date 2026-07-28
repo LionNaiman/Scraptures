@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cr8ve0vqp5cj6"]
+
+[ext_resource type="Script" uid="uid://dk225gub1hkau" path="res://scripts/interactions/scrap.gd" id="1_nvjw5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lt3y"]
+size = Vector2(16, 16)
+
+[node name="Scrap" type="Area2D" unique_id=1831857909]
+script = ExtResource("1_nvjw5")
+
+[node name="Visual" type="Polygon2D" parent="." unique_id=1430405910]
+color = Color(0.76959157, 0.32452708, 0.50081575, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=706970273]
+shape = SubResource("RectangleShape2D_0lt3y")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
