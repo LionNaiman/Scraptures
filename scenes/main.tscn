@@ -17,3 +17,21 @@ position = Vector2(176, 136)
 
 [node name="Scrap" parent="." unique_id=1831857909 instance=ExtResource("4_jyhfs")]
 position = Vector2(304, 232)
+
+[node name="Scrap2" parent="." unique_id=1596094789 instance=ExtResource("4_jyhfs")]
+position = Vector2(346, 234)
+
+[node name="Scrap3" parent="." unique_id=298502410 instance=ExtResource("4_jyhfs")]
+position = Vector2(303, 194)
+
+[node name="ScrapLabel" type="Label" parent="." unique_id=2081983897]
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 73.0
+offset_bottom = 33.0
+
+[node name="GoalLabel" type="Label" parent="." unique_id=2113071957]
+offset_left = 95.0
+offset_top = 12.0
+offset_right = 135.0
+offset_bottom = 35.0
