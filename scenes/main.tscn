@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dc5bmn1nrb1fi" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="Script" uid="uid://b0pqiqogew2n1" path="res://scripts/grid/grid.gd" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cr8ve0vqp5cj6" path="res://scenes/scrap/scrap.tscn" id="4_jyhfs"]
+[ext_resource type="Resource" uid="uid://cx1w0b7c0nuw" path="res://resources/modules/engine.tres" id="5_tbgi4"]
+[ext_resource type="Resource" uid="uid://b52gfnih0jcfd" path="res://resources/modules/battery.tres" id="6_o6xl0"]
+[ext_resource type="Resource" uid="uid://ceq3d6m8ybcja" path="res://resources/modules/armor_plate.tres" id="7_tipki"]
 
 [node name="Main" type="Node2D" unique_id=339090113]
 script = ExtResource("1_o5qli")
@@ -17,12 +20,15 @@ position = Vector2(176, 136)
 
 [node name="Scrap" parent="." unique_id=1831857909 instance=ExtResource("4_jyhfs")]
 position = Vector2(304, 232)
+module_definition = ExtResource("5_tbgi4")
 
 [node name="Scrap2" parent="." unique_id=1596094789 instance=ExtResource("4_jyhfs")]
 position = Vector2(346, 234)
+module_definition = ExtResource("6_o6xl0")
 
 [node name="Scrap3" parent="." unique_id=298502410 instance=ExtResource("4_jyhfs")]
 position = Vector2(303, 194)
+module_definition = ExtResource("7_tipki")
 
 [node name="ScrapLabel" type="Label" parent="." unique_id=2081983897]
 offset_left = 12.0
@@ -35,3 +41,9 @@ offset_left = 95.0
 offset_top = 12.0
 offset_right = 135.0
 offset_bottom = 35.0
+
+[node name="ModuleListLabel" type="Label" parent="." unique_id=1243678418]
+offset_left = 245.0
+offset_top = 1.0
+offset_right = 316.0
+offset_bottom = 76.0

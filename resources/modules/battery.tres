@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ModuleDefinition" format=3 uid="uid://b52gfnih0jcfd"]
+
+[ext_resource type="Script" uid="uid://c7n34hvsqloye" path="res://scripts/modules/module_definition.gd" id="1_m6s5u"]
+
+[resource]
+script = ExtResource("1_m6s5u")
+display_name = "Battery"
+metadata/_custom_type_script = "uid://c7n34hvsqloye"

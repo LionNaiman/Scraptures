@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ModuleDefinition" format=3 uid="uid://cx1w0b7c0nuw"]
+
+[ext_resource type="Script" uid="uid://c7n34hvsqloye" path="res://scripts/modules/module_definition.gd" id="1_n2snp"]
+
+[resource]
+resource_name = "Engine"
+script = ExtResource("1_n2snp")
+display_name = "Engine"
+metadata/_custom_type_script = "uid://c7n34hvsqloye"

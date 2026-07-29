@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cr8ve0vqp5cj6"]
 
-[ext_resource type="Script" uid="uid://dk225gub1hkau" path="res://scripts/interactions/scrap.gd" id="1_nvjw5"]
+[ext_resource type="Script" uid="uid://dk225gub1hkau" path="res://scripts/interactions/module_pickup.gd" id="1_nvjw5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lt3y"]
 size = Vector2(16, 16)
 
-[node name="Scrap" type="Area2D" unique_id=1831857909 groups=["scrap"]]
+[node name="Scrap" type="Area2D" unique_id=1831857909 groups=["module_pickup"]]
 script = ExtResource("1_nvjw5")
 
 [node name="Visual" type="Polygon2D" parent="." unique_id=1430405910]
