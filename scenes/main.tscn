@@ -3,13 +3,17 @@
 [ext_resource type="Script" uid="uid://0o82tl1elh4k" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dc5bmn1nrb1fi" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="Script" uid="uid://b0pqiqogew2n1" path="res://scripts/grid/grid.gd" id="2_sugp2"]
+[ext_resource type="Resource" uid="uid://b7vk621n7wol8" path="res://resources/scraptures/starter_scrapture.tres" id="2_tipki"]
 [ext_resource type="PackedScene" uid="uid://cr8ve0vqp5cj6" path="res://scenes/scrap/scrap.tscn" id="4_jyhfs"]
 [ext_resource type="Resource" uid="uid://cx1w0b7c0nuw" path="res://resources/modules/engine.tres" id="5_tbgi4"]
 [ext_resource type="Resource" uid="uid://b52gfnih0jcfd" path="res://resources/modules/battery.tres" id="6_o6xl0"]
 [ext_resource type="Resource" uid="uid://ceq3d6m8ybcja" path="res://resources/modules/armor_plate.tres" id="7_tipki"]
+[ext_resource type="PackedScene" uid="uid://cui1xpvflw6l3" path="res://scenes/ui/LoadoutPanel.tscn" id="9_85g3d"]
 
 [node name="Main" type="Node2D" unique_id=339090113]
 script = ExtResource("1_o5qli")
+scrap_goal = null
+starter_definition = ExtResource("2_tipki")
 
 [node name="Grid" type="Node2D" parent="." unique_id=1949735223]
 position = Vector2(160, 120)
@@ -30,6 +34,10 @@ module_definition = ExtResource("6_o6xl0")
 position = Vector2(303, 194)
 module_definition = ExtResource("7_tipki")
 
+[node name="Scrap4" parent="." unique_id=1106490751 instance=ExtResource("4_jyhfs")]
+position = Vector2(226, 197)
+module_definition = ExtResource("7_tipki")
+
 [node name="ScrapLabel" type="Label" parent="." unique_id=2081983897]
 offset_left = 12.0
 offset_top = 10.0
@@ -37,13 +45,19 @@ offset_right = 73.0
 offset_bottom = 33.0
 
 [node name="GoalLabel" type="Label" parent="." unique_id=2113071957]
-offset_left = 95.0
-offset_top = 12.0
-offset_right = 135.0
-offset_bottom = 35.0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 60.0
+offset_bottom = 65.0
 
 [node name="ModuleListLabel" type="Label" parent="." unique_id=1243678418]
 offset_left = 245.0
 offset_top = 1.0
 offset_right = 316.0
 offset_bottom = 76.0
+
+[node name="LoadoutPanel" parent="." unique_id=1996070717 instance=ExtResource("9_85g3d")]
+offset_left = 5.0
+offset_top = 204.0
+offset_right = 153.0
+offset_bottom = 439.0

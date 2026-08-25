@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cui1xpvflw6l3"]
+
+[ext_resource type="Script" uid="uid://dsk4v1yfd2mje" path="res://scripts/ui/loadout_panel.gd" id="1_r7wnq"]
+
+[node name="LoadoutPanel" type="PanelContainer" unique_id=1996070717]
+script = ExtResource("1_r7wnq")
+
+[node name="Content" type="VBoxContainer" parent="." unique_id=661739420]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="Content" unique_id=320102663]
+layout_mode = 2
+text = "Starter"
+
+[node name="HealthLabel" type="Label" parent="Content" unique_id=758174399]
+layout_mode = 2
+text = "Health: 20 / 20
+"
+
+[node name="SpeedLabel" type="Label" parent="Content" unique_id=1116712835]
+layout_mode = 2
+text = "Speed: 5
+"
+
+[node name="CapacityLabel" type="Label" parent="Content" unique_id=1559772477]
+layout_mode = 2
+text = "Capacity: 0 / 3
+"
+
+[node name="EquippedModulesLabel" type="Label" parent="Content" unique_id=38899585]
+layout_mode = 2
+text = "Equipped Modules:
+None"

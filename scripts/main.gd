@@ -7,12 +7,27 @@ var scrap_count: int = 0
 @export var scrap_goal: int = 3
 var module_inventory: ModuleInventory = ModuleInventory.new() #this is the array that will be used to store the collected modules
 @onready var module_list_label: Label = $ModuleListLabel #this is the label that will be used to display the list of collected modules
+@export var starter_definition: ScraptureDefinition #this is the definition that will be used to store the starter scrapture
+var starter_scrapture: ScraptureRuntime #this is the scrapture that will be used to store the starter scrapture
+@onready var loadout_panel: LoadoutPanel = $LoadoutPanel
 
 func _ready() -> void:
 	connect_module_pickup_signals() #connect the module pickup signals
 	update_scrap_label() #display the label text right away
 	update_module_list_label() #display the label text right away
+	create_starter_scrapture() #create the starter scrapture
+	loadout_panel.display_scrapture(starter_scrapture)
+	
+func create_starter_scrapture() -> void: #this is the function that will be called to create the starter scrapture
+	if starter_definition == null:
+		push_warning("Main has no starter ScraptureDefinition assigned.")
+		return
 
+	starter_scrapture = ScraptureRuntime.new()
+	starter_scrapture.initialize(starter_definition)
+
+	print("Starter: ", starter_scrapture.definition.display_name)
+	print("Starting health: ", starter_scrapture.current_health)
 
 func connect_module_pickup_signals() -> void:
 	var module_pickup_nodes: Array[Node] = (
@@ -54,3 +69,28 @@ func update_module_list_label() -> void:
 
 	for module: ModuleDefinition in module_inventory.get_modules():
 		module_list_label.text += "\n" + module.display_name #this is the text that will be displayed in the module list label
+
+func try_equip_module_from_inventory(module: ModuleDefinition) -> bool: #this is the function that will be called to try to equip a module from the inventory
+	if not module_inventory.has_module(module):
+		return false
+
+	if not starter_scrapture.can_equip_module(module):
+		return false
+
+	module_inventory.remove_module(module)
+	starter_scrapture.equip_module(module)
+	update_module_list_label() #this is the command that will be sent to the update module list label function
+
+	return true
+
+
+
+
+func try_unequip_module_to_inventory(module: ModuleDefinition) -> bool:
+	if not starter_scrapture.unequip_module(module):
+		return false
+
+	module_inventory.add_module(module)
+	update_module_list_label()
+
+	return true

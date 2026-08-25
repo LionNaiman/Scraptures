@@ -14,3 +14,9 @@ func get_count() -> int:
 
 func get_modules() -> Array[ModuleDefinition]:
 	return modules #this is the command that will be sent to the get modules function
+
+func remove_module(module: ModuleDefinition) -> void:
+	modules.erase(module) #this is the command that will be sent to the remove module function
+
+func has_module(module: ModuleDefinition) -> bool:
+	return modules.has(module) #this is the command that will be sent to the has module function

@@ -6,4 +6,5 @@
 resource_name = "Engine"
 script = ExtResource("1_n2snp")
 display_name = "Engine"
+speed_bonus = 2
 metadata/_custom_type_script = "uid://c7n34hvsqloye"
