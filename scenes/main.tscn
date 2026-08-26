@@ -4,15 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://dc5bmn1nrb1fi" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="Script" uid="uid://b0pqiqogew2n1" path="res://scripts/grid/grid.gd" id="2_sugp2"]
 [ext_resource type="Resource" uid="uid://b7vk621n7wol8" path="res://resources/scraptures/starter_scrapture.tres" id="2_tipki"]
+[ext_resource type="Resource" uid="uid://be473nlrwwkk" path="res://resources/scraptures/fast_wild_scrapture.tres" id="3_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://cr8ve0vqp5cj6" path="res://scenes/scrap/scrap.tscn" id="4_jyhfs"]
 [ext_resource type="Resource" uid="uid://cx1w0b7c0nuw" path="res://resources/modules/engine.tres" id="5_tbgi4"]
 [ext_resource type="Resource" uid="uid://b52gfnih0jcfd" path="res://resources/modules/battery.tres" id="6_o6xl0"]
 [ext_resource type="Resource" uid="uid://ceq3d6m8ybcja" path="res://resources/modules/armor_plate.tres" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://uva8cjqht36g" path="res://scenes/ui/InventoryScreen.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://vhnwojw7hj31" path="res://scenes/Battle/Battle.tscn" id="10_ya4ey"]
 
 [node name="Main" type="Node2D" unique_id=339090113]
 script = ExtResource("1_o5qli")
 starter_definition = ExtResource("2_tipki")
+fast_wild_definition = ExtResource("3_ya4ey")
 
 [node name="Grid" type="Node2D" parent="." unique_id=1949735223]
 position = Vector2(160, 120)
@@ -55,3 +58,5 @@ offset_left = 463.0
 offset_top = 201.0
 offset_right = 463.0
 offset_bottom = 201.0
+
+[node name="Battle" parent="." unique_id=327489164 instance=ExtResource("10_ya4ey")]

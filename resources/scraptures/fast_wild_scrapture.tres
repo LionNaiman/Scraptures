@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ScraptureDefinition" format=3 uid="uid://be473nlrwwkk"]
+
+[ext_resource type="Script" uid="uid://b3q0tcykcnyer" path="res://scripts/scraptures/scrapture_definition.gd" id="1_x7mvh"]
+
+[resource]
+script = ExtResource("1_x7mvh")
+display_name = "fast wild"
+base_max_health = 15
+base_speed = 8
+attachment_capacity = 2
+metadata/_custom_type_script = "uid://b3q0tcykcnyer"

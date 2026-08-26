@@ -8,16 +8,21 @@ var scrap_count: int = 0
 var module_inventory: ModuleInventory = ModuleInventory.new() #this is the array that will be used to store the collected modules
 @export var starter_definition: ScraptureDefinition #this is the definition that will be used to store the starter scrapture
 var starter_scrapture: ScraptureRuntime #this is the scrapture that will be used to store the starter scrapture
+@export var fast_wild_definition: ScraptureDefinition #enemy var
+var enemy_scrapture: ScraptureRuntime
 @onready var inventory_screen: InventoryScreen = $InventoryScreen
 @onready var player: CharacterBody2D = $Player
+@onready var battle: Battle = $Battle 
 
 
-func _ready() -> void:
+func _ready() -> void: 
 	connect_module_pickup_signals() #connect the module pickup signals
 	update_scrap_label() #display the label text right away
 	create_starter_scrapture() #create the starter scrapture
 	
-	# Display the scrapture and inventory
+	
+
+	# Display the scrapture and inventory 
 	inventory_screen.display_scrapture(starter_scrapture) # Display the scrapture in the inventory screen
 	inventory_screen.display_inventory(module_inventory)
 	inventory_screen.equip_requested.connect(_on_equip_requested) #connect the equip requested signal to the _on_equip_requested function
@@ -58,11 +63,20 @@ func create_starter_scrapture() -> void: #this is the function that will be call
 	print("Starter: ", starter_scrapture.definition.display_name)
 	print("Starting health: ", starter_scrapture.current_health)
 
+func create_enemy_scrapture() -> void:
+	if fast_wild_definition == null:
+		push_warning("Main has no Fast Wild ScraptureDefinition assigned.")
+		return
+
+	enemy_scrapture = ScraptureRuntime.new()
+	enemy_scrapture.initialize(fast_wild_definition)
+
 func _unhandled_input(event: InputEvent) -> void: #this is the function that will be called when the input is received
 	if event.is_action_pressed("inventory"): #this is the command that will be sent to the inventory screen
 		inventory_screen.visible = not inventory_screen.visible #this is the command that will be sent to the inventory screen
 		player.set_process_unhandled_input(not inventory_screen.visible)
-
+	if event.is_action_pressed("test_battle"):
+		start_test_battle()
 
 func connect_module_pickup_signals() -> void:
 	var module_pickup_nodes: Array[Node] = (
@@ -123,3 +137,8 @@ func try_unequip_module_to_inventory(module: ModuleDefinition) -> bool:
 	module_inventory.add_module(module)
 
 	return true
+
+
+func start_test_battle() -> void:
+	create_enemy_scrapture()
+	battle.initialize(starter_scrapture, enemy_scrapture)

@@ -56,3 +56,12 @@ func get_final_max_health() -> int:
 
 	return final_max_health 
 
+func take_damage(amount: int) -> void: #lose health during battle function 
+	if amount <= 0:
+		return
+
+	current_health = max(current_health - amount, 0)
+
+func is_defeated() -> bool:
+	return current_health <= 0
+
