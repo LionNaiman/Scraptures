@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://uva8cjqht36g"]
+
+[ext_resource type="PackedScene" uid="uid://cui1xpvflw6l3" path="res://scenes/ui/LoadoutPanel.tscn" id="1_1w4xw"]
+[ext_resource type="Script" uid="uid://qy8jar8fxaii" path="res://scripts/ui/inventory_screen.gd" id="1_4ramo"]
+
+[node name="InventoryScreen" type="Control" unique_id=1200173403]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ramo")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=2031548259]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Content" type="VBoxContainer" parent="Panel" unique_id=1327367449]
+layout_mode = 2
+
+[node name="AvailableModulesTitle" type="Label" parent="Panel/Content" unique_id=551685738]
+layout_mode = 2
+text = "Available Modules"
+
+[node name="AvailableModulesOptionButton" type="OptionButton" parent="Panel/Content" unique_id=2071818486]
+layout_mode = 2
+
+[node name="EquipButton" type="Button" parent="Panel/Content" unique_id=1781044996]
+layout_mode = 2
+text = "Equip Selected Module"
+
+[node name="EquippedModulesOptionButton" type="OptionButton" parent="Panel/Content" unique_id=306843666]
+layout_mode = 2
+
+[node name="UnequipButton" type="Button" parent="Panel/Content" unique_id=265746073]
+layout_mode = 2
+text = "Unequip Selected Module"
+
+[node name="FeedbackLabel" type="Label" parent="Panel/Content" unique_id=2007483401]
+layout_mode = 2
+
+[node name="LoadoutPanel" parent="Panel/Content" unique_id=1996070717 instance=ExtResource("1_1w4xw")]
+visible = true
+layout_mode = 2
+
+[connection signal="item_selected" from="Panel/Content/AvailableModulesOptionButton" to="." method="_on_available_modules_option_button_item_selected"]
+[connection signal="pressed" from="Panel/Content/EquipButton" to="." method="_on_equip_button_pressed"]
+[connection signal="item_selected" from="Panel/Content/EquippedModulesOptionButton" to="." method="_on_equipped_modules_option_button_item_selected"]
+[connection signal="pressed" from="Panel/Content/UnequipButton" to="." method="_on_unequip_button_pressed"]

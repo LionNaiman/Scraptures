@@ -8,11 +8,10 @@
 [ext_resource type="Resource" uid="uid://cx1w0b7c0nuw" path="res://resources/modules/engine.tres" id="5_tbgi4"]
 [ext_resource type="Resource" uid="uid://b52gfnih0jcfd" path="res://resources/modules/battery.tres" id="6_o6xl0"]
 [ext_resource type="Resource" uid="uid://ceq3d6m8ybcja" path="res://resources/modules/armor_plate.tres" id="7_tipki"]
-[ext_resource type="PackedScene" uid="uid://cui1xpvflw6l3" path="res://scenes/ui/LoadoutPanel.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://uva8cjqht36g" path="res://scenes/ui/InventoryScreen.tscn" id="10_choun"]
 
 [node name="Main" type="Node2D" unique_id=339090113]
 script = ExtResource("1_o5qli")
-scrap_goal = null
 starter_definition = ExtResource("2_tipki")
 
 [node name="Grid" type="Node2D" parent="." unique_id=1949735223]
@@ -50,14 +49,9 @@ offset_top = 42.0
 offset_right = 60.0
 offset_bottom = 65.0
 
-[node name="ModuleListLabel" type="Label" parent="." unique_id=1243678418]
-offset_left = 245.0
-offset_top = 1.0
-offset_right = 316.0
-offset_bottom = 76.0
-
-[node name="LoadoutPanel" parent="." unique_id=1996070717 instance=ExtResource("9_85g3d")]
-offset_left = 5.0
-offset_top = 204.0
-offset_right = 153.0
-offset_bottom = 439.0
+[node name="InventoryScreen" parent="." unique_id=1200173403 instance=ExtResource("10_choun")]
+visible = false
+offset_left = 463.0
+offset_top = 201.0
+offset_right = 463.0
+offset_bottom = 201.0

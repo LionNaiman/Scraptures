@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_owhxt")
 display_name = "Armor Plate"
+max_health_bonus = 10
 metadata/_custom_type_script = "uid://c7n34hvsqloye"

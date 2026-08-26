@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dsk4v1yfd2mje" path="res://scripts/ui/loadout_panel.gd" id="1_r7wnq"]
 
 [node name="LoadoutPanel" type="PanelContainer" unique_id=1996070717]
+visible = false
 script = ExtResource("1_r7wnq")
 
 [node name="Content" type="VBoxContainer" parent="." unique_id=661739420]
