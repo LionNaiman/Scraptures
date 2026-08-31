@@ -19,7 +19,9 @@ func _ready() -> void:
 	connect_module_pickup_signals() #connect the module pickup signals
 	update_scrap_label() #display the label text right away
 	create_starter_scrapture() #create the starter scrapture
+	battle.battle_ended.connect(_on_battle_ended) #battle ended signal connection
 	
+
 	
 
 	# Display the scrapture and inventory 
@@ -37,6 +39,11 @@ func _on_unequip_requested(module: ModuleDefinition) -> void:
 	inventory_screen.show_feedback("")
 	inventory_screen.display_inventory(module_inventory)
 	inventory_screen.display_scrapture(starter_scrapture)
+
+func _on_battle_ended() -> void:
+	player.set_process_unhandled_input(true)
+
+
 
 
 func _on_equip_requested(module: ModuleDefinition) -> void:
@@ -72,11 +79,19 @@ func create_enemy_scrapture() -> void:
 	enemy_scrapture.initialize(fast_wild_definition)
 
 func _unhandled_input(event: InputEvent) -> void: #this is the function that will be called when the input is received
-	if event.is_action_pressed("inventory"): #this is the command that will be sent to the inventory screen
-		inventory_screen.visible = not inventory_screen.visible #this is the command that will be sent to the inventory screen
+	if event.is_action_pressed("inventory"):
+		if battle.is_active():
+			return
+
+		inventory_screen.visible = not inventory_screen.visible
 		player.set_process_unhandled_input(not inventory_screen.visible)
 	if event.is_action_pressed("test_battle"):
 		start_test_battle()
+	if event.is_action_pressed("battle_basic_attack"):
+		battle.perform_basic_attack_round()
+	if event.is_action_pressed("battle_guard"):
+		battle.perform_guard_round()
+
 
 func connect_module_pickup_signals() -> void:
 	var module_pickup_nodes: Array[Node] = (
@@ -140,5 +155,16 @@ func try_unequip_module_to_inventory(module: ModuleDefinition) -> bool:
 
 
 func start_test_battle() -> void:
+	if battle.is_active():
+		return
+
+	if starter_scrapture.is_defeated():
+		print("Starter is defeated and cannot battle.")
+		return
+
+	inventory_screen.visible = false
+
 	create_enemy_scrapture()
 	battle.initialize(starter_scrapture, enemy_scrapture)
+
+	player.set_process_unhandled_input(false)

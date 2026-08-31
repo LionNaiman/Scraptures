@@ -4,3 +4,23 @@
 
 [node name="Battle" type="Node" unique_id=327489164]
 script = ExtResource("1_os6yq")
+
+[node name="BattleUI" type="CanvasLayer" parent="." unique_id=1990067282]
+
+[node name="HealthDisplay" type="VBoxContainer" parent="BattleUI" unique_id=477133339]
+anchors_preset = -1
+anchor_left = 0.011000001
+anchor_right = 0.011000001
+offset_left = 123.328
+offset_top = 22.0
+offset_right = 150.328
+offset_bottom = 72.0
+
+[node name="PlayerHealthLabel" type="Label" parent="BattleUI/HealthDisplay" unique_id=1466581221]
+layout_mode = 2
+
+[node name="EnemyHealthLabel" type="Label" parent="BattleUI/HealthDisplay" unique_id=1499724728]
+layout_mode = 2
+
+[node name="ResultLabel" type="Label" parent="BattleUI/HealthDisplay" unique_id=1432090024]
+layout_mode = 2
