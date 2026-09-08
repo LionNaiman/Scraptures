@@ -20,6 +20,13 @@ offset_bottom = 40.0
 [node name="Content" type="VBoxContainer" parent="Panel" unique_id=1327367449]
 layout_mode = 2
 
+[node name="PartyTitle" type="Label" parent="Panel/Content" unique_id=195926015]
+layout_mode = 2
+text = "Party"
+
+[node name="PartyOptionButton" type="OptionButton" parent="Panel/Content" unique_id=742067863]
+layout_mode = 2
+
 [node name="AvailableModulesTitle" type="Label" parent="Panel/Content" unique_id=551685738]
 layout_mode = 2
 text = "Available Modules"
@@ -45,6 +52,7 @@ layout_mode = 2
 visible = true
 layout_mode = 2
 
+[connection signal="item_selected" from="Panel/Content/PartyOptionButton" to="." method="_on_party_option_button_item_selected"]
 [connection signal="item_selected" from="Panel/Content/AvailableModulesOptionButton" to="." method="_on_available_modules_option_button_item_selected"]
 [connection signal="pressed" from="Panel/Content/EquipButton" to="." method="_on_equip_button_pressed"]
 [connection signal="item_selected" from="Panel/Content/EquippedModulesOptionButton" to="." method="_on_equipped_modules_option_button_item_selected"]

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="MoveDefinition" format=3 uid="uid://6xvi2lmgs6gx"]
+
+[ext_resource type="Script" uid="uid://c8p2yw6s5nq3b" path="res://scripts/moves/move_definition.gd" id="1_mr8hj"]
+
+[resource]
+script = ExtResource("1_mr8hj")
+display_name = "Engine Ram"
+damage = 6

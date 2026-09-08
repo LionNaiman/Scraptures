@@ -65,3 +65,11 @@ func take_damage(amount: int) -> void: #lose health during battle function
 func is_defeated() -> bool:
 	return current_health <= 0
 
+func get_granted_moves() -> Array[MoveDefinition]:
+	var moves: Array[MoveDefinition] = []
+
+	for module: ModuleDefinition in equipped_modules:
+		if module.granted_move != null:
+			moves.append(module.granted_move)
+
+	return moves

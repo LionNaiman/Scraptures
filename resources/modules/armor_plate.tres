@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="ModuleDefinition" format=3 uid="uid://ceq3d6m8ybcja"]
 
+[ext_resource type="Resource" uid="uid://1mvj3opof7ae" path="res://resources/moves/brace.tres" id="1_iwemt"]
 [ext_resource type="Script" uid="uid://c7n34hvsqloye" path="res://scripts/modules/module_definition.gd" id="1_owhxt"]
 
 [resource]
 script = ExtResource("1_owhxt")
 display_name = "Armor Plate"
 max_health_bonus = 10
+granted_move = ExtResource("1_iwemt")
 metadata/_custom_type_script = "uid://c7n34hvsqloye"

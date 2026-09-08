@@ -2,7 +2,7 @@ class_name InventoryScreen
 extends Control
 signal equip_requested(module: ModuleDefinition)
 signal unequip_requested(module: ModuleDefinition)
-
+signal scrapture_selected(scrapture: ScraptureRuntime)
 
 
 
@@ -26,12 +26,15 @@ signal unequip_requested(module: ModuleDefinition)
 @onready var feedback_label: Label = (
 	$Panel/Content/FeedbackLabel
 )
+@onready var party_option_button: OptionButton = (
+	$Panel/Content/PartyOptionButton
+)
 
 var selected_module: ModuleDefinition
 var displayed_modules: Array[ModuleDefinition] = []
 var selected_equipped_module: ModuleDefinition
 var displayed_equipped_modules: Array[ModuleDefinition] = []
-
+var displayed_scraptures: Array[ScraptureRuntime] = []
 
 func show_feedback(message: String) -> void:
 	feedback_label.text = message
@@ -74,6 +77,7 @@ func display_scrapture(scrapture: ScraptureRuntime) -> void: # Function to displ
 
 	selected_equipped_module = displayed_equipped_modules[0] #this is the command that will be sent to the selected equipped module variable to display the first equipped module
 
+
 func _on_equip_button_pressed() -> void: # Function to equip a module
 	if selected_module == null: #this is the command that will be sent to the selected module variable
 		return
@@ -93,3 +97,25 @@ func _on_available_modules_option_button_item_selected(index: int) -> void:
 
 func _on_equipped_modules_option_button_item_selected(index: int) -> void:
 	selected_equipped_module = displayed_equipped_modules[index]
+
+
+func display_party(party: Array[ScraptureRuntime]) -> void: # Function to display the party option button and the scraptures in the party
+	displayed_scraptures = party
+	party_option_button.clear()
+
+	if displayed_scraptures.is_empty():
+		party_option_button.disabled = true
+		return
+
+	party_option_button.disabled = false
+
+	for scrapture: ScraptureRuntime in displayed_scraptures:
+		party_option_button.add_item(
+			scrapture.definition.display_name
+		)
+
+func _on_party_option_button_item_selected(index: int) -> void:
+	if index < 0 or index >= displayed_scraptures.size():
+		return
+
+	scrapture_selected.emit(displayed_scraptures[index])

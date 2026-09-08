@@ -8,6 +8,8 @@ var scrap_count: int = 0
 var module_inventory: ModuleInventory = ModuleInventory.new() #this is the array that will be used to store the collected modules
 @export var starter_definition: ScraptureDefinition #this is the definition that will be used to store the starter scrapture
 var starter_scrapture: ScraptureRuntime #this is the scrapture that will be used to store the starter scrapture
+var scrapture_party: Array[ScraptureRuntime] = []
+var selected_scrapture: ScraptureRuntime #this is the scrapture that will be used to store the selected scrapture
 @export var fast_wild_definition: ScraptureDefinition #enemy var
 var enemy_scrapture: ScraptureRuntime
 @onready var inventory_screen: InventoryScreen = $InventoryScreen
@@ -20,16 +22,19 @@ func _ready() -> void:
 	update_scrap_label() #display the label text right away
 	create_starter_scrapture() #create the starter scrapture
 	battle.battle_ended.connect(_on_battle_ended) #battle ended signal connection
+	battle.scrapture_captured.connect(_on_scrapture_captured) #scrapture captured signal connection
 	
 
 	
 
 	# Display the scrapture and inventory 
-	inventory_screen.display_scrapture(starter_scrapture) # Display the scrapture in the inventory screen
+	inventory_screen.display_scrapture(selected_scrapture) # Display the scrapture in the inventory screen
 	inventory_screen.display_inventory(module_inventory)
 	inventory_screen.equip_requested.connect(_on_equip_requested) #connect the equip requested signal to the _on_equip_requested function
 	inventory_screen.unequip_requested.connect(_on_unequip_requested) #connect the unequip requested signal to the _on_unequip_requested function
-
+	inventory_screen.scrapture_selected.connect(
+	_on_scrapture_selected
+)
 func _on_unequip_requested(module: ModuleDefinition) -> void:
 	var unequipped_successfully: bool = try_unequip_module_to_inventory(module)
 
@@ -42,10 +47,41 @@ func _on_unequip_requested(module: ModuleDefinition) -> void:
 
 func _on_battle_ended() -> void:
 	player.set_process_unhandled_input(true)
+	print_party()
 
+func _on_scrapture_captured(scrapture: ScraptureRuntime) -> void:
+	if scrapture == null:
+		return
 
+	if scrapture_party.has(scrapture):
+		return
 
+	scrapture_party.append(scrapture)
+	inventory_screen.display_party(scrapture_party)
 
+	print(
+		"Added to party: ",
+		scrapture.definition.display_name
+	)
+
+	print(
+		"Party size: ",
+		scrapture_party.size()
+	)
+
+func _on_scrapture_selected(
+	scrapture: ScraptureRuntime
+) -> void:
+	if not scrapture_party.has(scrapture):
+		return
+
+	selected_scrapture = scrapture
+
+	inventory_screen.display_scrapture(
+		selected_scrapture
+	)
+
+	inventory_screen.show_feedback("")
 func _on_equip_requested(module: ModuleDefinition) -> void:
 	var equipped_successfully: bool = try_equip_module_from_inventory(module)
 
@@ -57,7 +93,7 @@ func _on_equip_requested(module: ModuleDefinition) -> void:
 
 	inventory_screen.show_feedback("")
 	inventory_screen.display_inventory(module_inventory)
-	inventory_screen.display_scrapture(starter_scrapture)
+	inventory_screen.display_scrapture(selected_scrapture)
 
 func create_starter_scrapture() -> void: #this is the function that will be called to create the starter scrapture
 	if starter_definition == null:
@@ -66,7 +102,8 @@ func create_starter_scrapture() -> void: #this is the function that will be call
 
 	starter_scrapture = ScraptureRuntime.new()
 	starter_scrapture.initialize(starter_definition)
-
+	scrapture_party.append(starter_scrapture)
+	selected_scrapture = starter_scrapture
 	print("Starter: ", starter_scrapture.definition.display_name)
 	print("Starting health: ", starter_scrapture.current_health)
 
@@ -91,6 +128,13 @@ func _unhandled_input(event: InputEvent) -> void: #this is the function that wil
 		battle.perform_basic_attack_round()
 	if event.is_action_pressed("battle_guard"):
 		battle.perform_guard_round()
+	if event.is_action_pressed("battle_module_move"):
+		battle.perform_granted_move_at_index(0)
+	if event.is_action_pressed("battle_module_move_2"):
+		battle.perform_granted_move_at_index(1)	
+	if event.is_action_pressed("battle_capture"):
+		battle.perform_capture_attempt()
+
 
 
 func connect_module_pickup_signals() -> void:
@@ -130,28 +174,54 @@ func check_scrap_goal() -> void: #this is the function that will be called to ch
 
 
 
-func try_equip_module_from_inventory(module: ModuleDefinition) -> bool: #this is the function that will be called to try to equip a module from the inventory
+func try_equip_module_from_inventory(
+	module: ModuleDefinition
+) -> bool:
+	if selected_scrapture == null:
+		return false
+
 	if not module_inventory.has_module(module):
 		return false
 
-	if not starter_scrapture.can_equip_module(module):
+	if not selected_scrapture.can_equip_module(module):
 		return false
 
 	module_inventory.remove_module(module)
-	starter_scrapture.equip_module(module)
+	selected_scrapture.equip_module(module)
 
 	return true
 
 
 
 
-func try_unequip_module_to_inventory(module: ModuleDefinition) -> bool:
-	if not starter_scrapture.unequip_module(module):
+func try_unequip_module_to_inventory(
+	module: ModuleDefinition
+) -> bool:
+	if selected_scrapture == null:
+		return false
+
+	if not selected_scrapture.unequip_module(module):
 		return false
 
 	module_inventory.add_module(module)
 
 	return true
+
+
+func print_party() -> void:
+	print("----- PARTY -----")
+
+	for scrapture: ScraptureRuntime in scrapture_party:
+		print(
+			scrapture.definition.display_name,
+			" HP: ",
+			scrapture.current_health,
+			" / ",
+			scrapture.get_final_max_health()
+		)
+
+	print("Party size: ", scrapture_party.size())
+	print("-----------------")
 
 
 func start_test_battle() -> void:

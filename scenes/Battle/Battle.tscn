@@ -24,3 +24,35 @@ layout_mode = 2
 
 [node name="ResultLabel" type="Label" parent="BattleUI/HealthDisplay" unique_id=1432090024]
 layout_mode = 2
+
+[node name="ActionMenu" type="VBoxContainer" parent="BattleUI" unique_id=455589243]
+offset_left = 324.0
+offset_top = 114.0
+offset_right = 411.0
+offset_bottom = 213.0
+
+[node name="BasicAttackButton" type="Button" parent="BattleUI/ActionMenu" unique_id=1773785302]
+layout_mode = 2
+text = "Basic Attack"
+
+[node name="GuardButton" type="Button" parent="BattleUI/ActionMenu" unique_id=151897702]
+layout_mode = 2
+text = "GuardButton"
+
+[node name="CaptureButton" type="Button" parent="BattleUI/ActionMenu" unique_id=264168664]
+layout_mode = 2
+text = "Capture"
+
+[node name="ModuleMove1Button" type="Button" parent="BattleUI/ActionMenu" unique_id=1224242716]
+layout_mode = 2
+text = "Module Move"
+
+[node name="ModuleMove2Button" type="Button" parent="BattleUI/ActionMenu" unique_id=986066031]
+layout_mode = 2
+text = "Module Move 2"
+
+[connection signal="pressed" from="BattleUI/ActionMenu/BasicAttackButton" to="." method="_on_basic_attack_button_pressed"]
+[connection signal="pressed" from="BattleUI/ActionMenu/GuardButton" to="." method="_on_guard_button_pressed"]
+[connection signal="pressed" from="BattleUI/ActionMenu/CaptureButton" to="." method="_on_capture_button_pressed"]
+[connection signal="pressed" from="BattleUI/ActionMenu/ModuleMove1Button" to="." method="_on_module_move_1_button_pressed"]
+[connection signal="pressed" from="BattleUI/ActionMenu/ModuleMove2Button" to="." method="_on_module_move_2_button_pressed"]

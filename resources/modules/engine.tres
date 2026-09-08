@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="ModuleDefinition" format=3 uid="uid://cx1w0b7c0nuw"]
 
+[ext_resource type="Resource" uid="uid://6xvi2lmgs6gx" path="res://resources/moves/engine_ram.tres" id="1_a4gn2"]
 [ext_resource type="Script" uid="uid://c7n34hvsqloye" path="res://scripts/modules/module_definition.gd" id="1_n2snp"]
 
 [resource]
@@ -7,4 +8,5 @@ resource_name = "Engine"
 script = ExtResource("1_n2snp")
 display_name = "Engine"
 speed_bonus = 2
+granted_move = ExtResource("1_a4gn2")
 metadata/_custom_type_script = "uid://c7n34hvsqloye"

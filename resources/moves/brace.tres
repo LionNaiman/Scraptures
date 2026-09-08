@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MoveDefinition" format=3 uid="uid://1mvj3opof7ae"]
+
+[ext_resource type="Script" uid="uid://c8p2yw6s5nq3b" path="res://scripts/moves/move_definition.gd" id="1_775vk"]
+
+[resource]
+script = ExtResource("1_775vk")
+display_name = "Brace"
+move_kind = 1
+metadata/_custom_type_script = "uid://c8p2yw6s5nq3b"
