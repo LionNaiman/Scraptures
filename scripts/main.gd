@@ -10,7 +10,6 @@ var module_inventory: ModuleInventory = ModuleInventory.new() #this is the array
 var starter_scrapture: ScraptureRuntime #this is the scrapture that will be used to store the starter scrapture
 var scrapture_party: Array[ScraptureRuntime] = []
 var selected_scrapture: ScraptureRuntime #this is the scrapture that will be used to store the selected scrapture
-@export var fast_wild_definition: ScraptureDefinition #enemy var
 var enemy_scrapture: ScraptureRuntime
 @onready var inventory_screen: InventoryScreen = $InventoryScreen
 @onready var player: CharacterBody2D = $Player
@@ -35,6 +34,9 @@ func _ready() -> void:
 	inventory_screen.scrapture_selected.connect(
 	_on_scrapture_selected
 )
+
+
+
 func _on_unequip_requested(module: ModuleDefinition) -> void:
 	var unequipped_successfully: bool = try_unequip_module_to_inventory(module)
 
@@ -43,7 +45,9 @@ func _on_unequip_requested(module: ModuleDefinition) -> void:
 
 	inventory_screen.show_feedback("")
 	inventory_screen.display_inventory(module_inventory)
-	inventory_screen.display_scrapture(starter_scrapture)
+	inventory_screen.display_scrapture(selected_scrapture)
+
+
 
 func _on_battle_ended() -> void:
 	player.set_process_unhandled_input(true)
@@ -69,6 +73,19 @@ func _on_scrapture_captured(scrapture: ScraptureRuntime) -> void:
 		scrapture_party.size()
 	)
 
+func _on_encounter_triggered(
+	scrapture_definition: ScraptureDefinition
+) -> void:
+	print(
+		"Main received encounter: ",
+		scrapture_definition.display_name
+	)
+
+	start_battle(scrapture_definition)
+
+
+
+	
 func _on_scrapture_selected(
 	scrapture: ScraptureRuntime
 ) -> void:
@@ -107,13 +124,20 @@ func create_starter_scrapture() -> void: #this is the function that will be call
 	print("Starter: ", starter_scrapture.definition.display_name)
 	print("Starting health: ", starter_scrapture.current_health)
 
-func create_enemy_scrapture() -> void:
-	if fast_wild_definition == null:
-		push_warning("Main has no Fast Wild ScraptureDefinition assigned.")
+func create_enemy_scrapture(
+	enemy_definition: ScraptureDefinition
+) -> void:
+	if enemy_definition == null:
+		push_warning("Cannot create enemy without a ScraptureDefinition.")
 		return
 
 	enemy_scrapture = ScraptureRuntime.new()
-	enemy_scrapture.initialize(fast_wild_definition)
+	enemy_scrapture.initialize(enemy_definition)
+
+	print(
+		"Created enemy: ",
+		enemy_scrapture.definition.display_name
+	)
 
 func _unhandled_input(event: InputEvent) -> void: #this is the function that will be called when the input is received
 	if event.is_action_pressed("inventory"):
@@ -122,8 +146,6 @@ func _unhandled_input(event: InputEvent) -> void: #this is the function that wil
 
 		inventory_screen.visible = not inventory_screen.visible
 		player.set_process_unhandled_input(not inventory_screen.visible)
-	if event.is_action_pressed("test_battle"):
-		start_test_battle()
 	if event.is_action_pressed("battle_basic_attack"):
 		battle.perform_basic_attack_round()
 	if event.is_action_pressed("battle_guard"):
@@ -223,18 +245,27 @@ func print_party() -> void:
 	print("Party size: ", scrapture_party.size())
 	print("-----------------")
 
-
-func start_test_battle() -> void:
+func start_battle(
+	enemy_definition: ScraptureDefinition
+) -> void:
 	if battle.is_active():
 		return
 
-	if starter_scrapture.is_defeated():
-		print("Starter is defeated and cannot battle.")
+	if selected_scrapture == null:
+		push_warning("No Scrapture selected for battle.")
+		return
+
+	if selected_scrapture.is_defeated():
+		print("Selected Scrapture is defeated and cannot battle.")
 		return
 
 	inventory_screen.visible = false
 
-	create_enemy_scrapture()
-	battle.initialize(starter_scrapture, enemy_scrapture)
+	create_enemy_scrapture(enemy_definition)
+
+	battle.initialize(
+		selected_scrapture,
+		enemy_scrapture
+	)
 
 	player.set_process_unhandled_input(false)

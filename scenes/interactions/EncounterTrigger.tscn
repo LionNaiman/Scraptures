@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://s08wpii7loi5"]
+
+[ext_resource type="Script" uid="uid://c02k5s5k0y8a7" path="res://scripts/interactions/encounter_trigger.gd" id="1_wh713"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wh713"]
+size = Vector2(32, 32)
+
+[node name="EncounterTrigger" type="Area2D" unique_id=400659884]
+script = ExtResource("1_wh713")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2042675267]
+shape = SubResource("RectangleShape2D_wh713")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=766951619]
+color = Color(0.7797995, 0.6143179, 0.08441768, 1)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

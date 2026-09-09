@@ -11,11 +11,12 @@
 [ext_resource type="Resource" uid="uid://ceq3d6m8ybcja" path="res://resources/modules/armor_plate.tres" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://uva8cjqht36g" path="res://scenes/ui/InventoryScreen.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://vhnwojw7hj31" path="res://scenes/Battle/Battle.tscn" id="10_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://s08wpii7loi5" path="res://scenes/interactions/EncounterTrigger.tscn" id="12_eb6dy"]
+[ext_resource type="Resource" uid="uid://bphuqqy7w2hbs" path="res://resources/scraptures/slow_wild_scrapture.tres" id="13_trceg"]
 
 [node name="Main" type="Node2D" unique_id=339090113]
 script = ExtResource("1_o5qli")
 starter_definition = ExtResource("2_tipki")
-fast_wild_definition = ExtResource("3_ya4ey")
 
 [node name="Grid" type="Node2D" parent="." unique_id=1949735223]
 position = Vector2(160, 120)
@@ -60,3 +61,28 @@ offset_right = 463.0
 offset_bottom = 201.0
 
 [node name="Battle" parent="." unique_id=327489164 instance=ExtResource("10_ya4ey")]
+
+[node name="EncounterTrigger" parent="." unique_id=78327874 instance=ExtResource("12_eb6dy")]
+position = Vector2(272, 136)
+scrapture_definition = ExtResource("3_ya4ey")
+
+[node name="Polygon2D" parent="EncounterTrigger" index="1" unique_id=766951619]
+color = Color(0.14538461, 0.7376643, 0.63657504, 1)
+
+[node name="SlowWildEncounter" parent="." unique_id=400659884 instance=ExtResource("12_eb6dy")]
+position = Vector2(272, 200)
+scrapture_definition = ExtResource("13_trceg")
+
+[node name="FinalEncounter" parent="." unique_id=1318858485 instance=ExtResource("12_eb6dy")]
+position = Vector2(432, 328)
+scrapture_definition = ExtResource("13_trceg")
+
+[node name="Polygon2D" parent="FinalEncounter" index="1" unique_id=766951619]
+color = Color(0.78039217, 0, 0.08627451, 1)
+
+[connection signal="encounter_triggered" from="EncounterTrigger" to="." method="_on_encounter_triggered"]
+[connection signal="encounter_triggered" from="SlowWildEncounter" to="." method="_on_encounter_triggered"]
+[connection signal="encounter_triggered" from="FinalEncounter" to="." method="_on_encounter_triggered"]
+
+[editable path="EncounterTrigger"]
+[editable path="FinalEncounter"]
