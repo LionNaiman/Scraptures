@@ -6,3 +6,5 @@ extends Resource # A Resource is a data container that can be saved to a file an
 @export var base_max_health: int = 10
 @export var base_speed: int = 5
 @export var attachment_capacity: int = 3
+@export var overworld_texture: Texture2D 
+@export var battle_texture: Texture2D

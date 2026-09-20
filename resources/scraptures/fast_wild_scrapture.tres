@@ -1,6 +1,12 @@
 [gd_resource type="Resource" script_class="ScraptureDefinition" format=3 uid="uid://be473nlrwwkk"]
 
+[ext_resource type="Texture2D" uid="uid://c7012iamquel8" path="res://sprites/fast wild.jpg" id="1_lw7fb"]
 [ext_resource type="Script" uid="uid://b3q0tcykcnyer" path="res://scripts/scraptures/scrapture_definition.gd" id="1_x7mvh"]
+[ext_resource type="Texture2D" uid="uid://ce105i7nefowa" path="res://sprites/pixellab-Create-a-single-2D-pixel-art-o-1789896390996.png" id="2_j3ym6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2lv3"]
+atlas = ExtResource("2_j3ym6")
+region = Rect2(0, 0, 32, 32)
 
 [resource]
 script = ExtResource("1_x7mvh")
@@ -8,4 +14,6 @@ display_name = "fast wild"
 base_max_health = 15
 base_speed = 8
 attachment_capacity = 2
+overworld_texture = SubResource("AtlasTexture_d2lv3")
+battle_texture = ExtResource("1_lw7fb")
 metadata/_custom_type_script = "uid://b3q0tcykcnyer"

@@ -1,10 +1,20 @@
 class_name EncounterTrigger
 extends Area2D
 
-
-signal encounter_triggered(scrapture_definition: ScraptureDefinition)
+signal encounter_triggered(
+	scrapture_definition: ScraptureDefinition
+)
 
 @export var scrapture_definition: ScraptureDefinition
+
+@onready var scrapture_sprite: Sprite2D = $ScraptureSprite
+
+
+func _ready() -> void:
+	if scrapture_definition == null:
+		return
+
+	scrapture_sprite.texture = scrapture_definition.overworld_texture
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -12,9 +22,10 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 
 	if scrapture_definition == null:
-		push_warning("EncounterTrigger has no ScraptureDefinition assigned.")
+		push_warning(
+			"EncounterTrigger has no ScraptureDefinition assigned."
+		)
 		return
 
-	print("Encounter triggered")
 	encounter_triggered.emit(scrapture_definition)
 	queue_free()

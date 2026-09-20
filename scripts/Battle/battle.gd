@@ -29,6 +29,9 @@ var enemy_scrapture: ScraptureRuntime
 @onready var enemy_health_label: Label = (
 	$BattleUI/HealthDisplay/EnemyHealthLabel
 )
+@onready var enemy_battle_sprite: TextureRect = (
+	$BattleUI/EnemyBattleSprite
+)
 @onready var result_label: Label = (
 	$BattleUI/HealthDisplay/ResultLabel
 )
@@ -59,6 +62,11 @@ func initialize(
 	action_menu.visible = true
 	player_scrapture = player
 	enemy_scrapture = enemy
+
+	enemy_battle_sprite.texture = (
+	enemy_scrapture.definition.battle_texture
+)
+
 	update_module_move_buttons()
 	battle_ui.visible = true
 	current_state = BattleState.WAITING_FOR_PLAYER_ACTION
@@ -117,6 +125,18 @@ func perform_basic_attack(
 
 	defender.take_damage(damage)
 
+	if not result_label.text.is_empty():
+		result_label.text += "\n"
+
+	result_label.text += (
+		attacker.definition.display_name
+		+ " dealt "
+		+ str(damage)
+		+ " damage to "
+		+ defender.definition.display_name
+		+ "."
+	)
+
 	print(
 		attacker.definition.display_name,
 		" attacks ",
@@ -172,29 +192,64 @@ func perform_round(
 ) -> void:
 	if current_state != BattleState.WAITING_FOR_PLAYER_ACTION:
 		return
+
 	if (
 		player_action == BattleAction.GRANTED_MOVE
 		and selected_move == null
 	):
-		
 		return
 
+	result_label.text = ""
 	current_state = BattleState.RESOLVING
 
 	var enemy_action: BattleAction = choose_enemy_action()
 
-	if player_action == BattleAction.GUARD:
-		print(
-			player_scrapture.definition.display_name,
-			" guards."
-		)
 
+	# Player Guard / Brace message
+	if player_action == BattleAction.GUARD:
+		if selected_move != null:
+			print(
+				player_scrapture.definition.display_name,
+				" uses ",
+				selected_move.display_name,
+				" and guards."
+			)
+
+			result_label.text += (
+				player_scrapture.definition.display_name
+				+ " uses "
+				+ selected_move.display_name
+				+ " and guards."
+			)
+		else:
+			print(
+				player_scrapture.definition.display_name,
+				" guards."
+			)
+
+			result_label.text += (
+				player_scrapture.definition.display_name
+				+ " guards."
+			)
+
+
+	# Enemy Guard message
 	if enemy_action == BattleAction.GUARD:
 		print(
 			enemy_scrapture.definition.display_name,
 			" guards."
 		)
 
+		if not result_label.text.is_empty():
+			result_label.text += "\n"
+
+		result_label.text += (
+			enemy_scrapture.definition.display_name
+			+ " guards."
+		)
+
+
+	# Basic Attack vs Basic Attack
 	if (
 		player_action == BattleAction.BASIC_ATTACK
 		and enemy_action == BattleAction.BASIC_ATTACK
@@ -202,16 +257,31 @@ func perform_round(
 		var first_scrapture: ScraptureRuntime = get_first_scrapture()
 
 		if first_scrapture == player_scrapture:
-			perform_basic_attack(player_scrapture, enemy_scrapture)
+			perform_basic_attack(
+				player_scrapture,
+				enemy_scrapture
+			)
 
 			if current_state != BattleState.ENDED:
-				perform_basic_attack(enemy_scrapture, player_scrapture)
+				perform_basic_attack(
+					enemy_scrapture,
+					player_scrapture
+				)
+
 		else:
-			perform_basic_attack(enemy_scrapture, player_scrapture)
+			perform_basic_attack(
+				enemy_scrapture,
+				player_scrapture
+			)
 
 			if current_state != BattleState.ENDED:
-				perform_basic_attack(player_scrapture, enemy_scrapture)
+				perform_basic_attack(
+					player_scrapture,
+					enemy_scrapture
+				)
 
+
+	# Basic Attack vs Enemy Guard
 	elif (
 		player_action == BattleAction.BASIC_ATTACK
 		and enemy_action == BattleAction.GUARD
@@ -220,9 +290,10 @@ func perform_round(
 			player_scrapture,
 			enemy_scrapture,
 			get_guarded_damage(BASIC_ATTACK_DAMAGE)
-
 		)
 
+
+	# Player Guard vs Enemy Basic Attack
 	elif (
 		player_action == BattleAction.GUARD
 		and enemy_action == BattleAction.BASIC_ATTACK
@@ -232,12 +303,13 @@ func perform_round(
 			player_scrapture,
 			get_guarded_damage(BASIC_ATTACK_DAMAGE)
 		)
+
+
+	# Module Move vs Enemy Guard
 	elif (
 		player_action == BattleAction.GRANTED_MOVE
 		and enemy_action == BattleAction.GUARD
 	):
-		
-
 		print(
 			player_scrapture.definition.display_name,
 			" uses ",
@@ -245,11 +317,24 @@ func perform_round(
 			"."
 		)
 
+		if not result_label.text.is_empty():
+			result_label.text += "\n"
+
+		result_label.text += (
+			player_scrapture.definition.display_name
+			+ " uses "
+			+ selected_move.display_name
+			+ "."
+		)
+
 		perform_basic_attack(
 			player_scrapture,
 			enemy_scrapture,
 			get_guarded_damage(selected_move.damage)
 		)
+
+
+	# Module Move vs Enemy Basic Attack
 	elif (
 		player_action == BattleAction.GRANTED_MOVE
 		and enemy_action == BattleAction.BASIC_ATTACK
@@ -262,6 +347,16 @@ func perform_round(
 				" uses ",
 				selected_move.display_name,
 				"."
+			)
+
+			if not result_label.text.is_empty():
+				result_label.text += "\n"
+
+			result_label.text += (
+				player_scrapture.definition.display_name
+				+ " uses "
+				+ selected_move.display_name
+				+ "."
 			)
 
 			perform_basic_attack(
@@ -290,13 +385,24 @@ func perform_round(
 					"."
 				)
 
+				if not result_label.text.is_empty():
+					result_label.text += "\n"
+
+				result_label.text += (
+					player_scrapture.definition.display_name
+					+ " uses "
+					+ selected_move.display_name
+					+ "."
+				)
+
 				perform_basic_attack(
 					player_scrapture,
 					enemy_scrapture,
 					selected_move.damage
 				)
-		
-		update_health_display()
+
+
+	update_health_display()
 
 	if current_state != BattleState.ENDED:
 		current_state = BattleState.WAITING_FOR_PLAYER_ACTION
@@ -332,7 +438,10 @@ func perform_granted_move_round(
 			"."
 		)
 
-		perform_round(BattleAction.GUARD)
+		perform_round(
+		BattleAction.GUARD,
+		selected_move
+	)
 		return
 
 	perform_round(

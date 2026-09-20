@@ -1,8 +1,8 @@
 extends Node2D
 #@oneready - initiatlize the variable only once the node and the child exist
 #$ScrapLabel - find the child of the current node named scrapLabel
-@onready var scrap_label: Label = $ScrapLabel
-@onready var goal_label: Label = $GoalLabel
+@onready var scrap_label: Label = $HUD/ScrapLabel
+@onready var goal_label: Label = $HUD/GoalLabel
 var scrap_count: int = 0
 @export var scrap_goal: int = 3
 var module_inventory: ModuleInventory = ModuleInventory.new() #this is the array that will be used to store the collected modules

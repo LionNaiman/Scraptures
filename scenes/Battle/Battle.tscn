@@ -51,6 +51,13 @@ text = "Module Move"
 layout_mode = 2
 text = "Module Move 2"
 
+[node name="EnemyBattleSprite" type="TextureRect" parent="BattleUI" unique_id=49562569]
+offset_left = 650.0
+offset_top = 80.0
+offset_right = 778.0
+offset_bottom = 208.0
+stretch_mode = 3
+
 [connection signal="pressed" from="BattleUI/ActionMenu/BasicAttackButton" to="." method="_on_basic_attack_button_pressed"]
 [connection signal="pressed" from="BattleUI/ActionMenu/GuardButton" to="." method="_on_guard_button_pressed"]
 [connection signal="pressed" from="BattleUI/ActionMenu/CaptureButton" to="." method="_on_capture_button_pressed"]
