@@ -3,63 +3,76 @@
 [ext_resource type="PackedScene" uid="uid://cui1xpvflw6l3" path="res://scenes/ui/LoadoutPanel.tscn" id="1_1w4xw"]
 [ext_resource type="Script" uid="uid://qy8jar8fxaii" path="res://scripts/ui/inventory_screen.gd" id="1_4ramo"]
 
+[sub_resource type="Theme" id="Theme_4ramo"]
+default_font_size = 10
+
 [node name="InventoryScreen" type="Control" unique_id=1200173403]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 460.0
-offset_top = 56.0
-offset_right = 460.0
-offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_4ramo")
 script = ExtResource("1_4ramo")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=841837705]
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 640.0
+color = Color(0, 0, 0, 0.56078434)
 
 [node name="Panel" type="PanelContainer" parent="." unique_id=2031548259]
 layout_mode = 0
-offset_left = 179.0
-offset_top = 14.0
-offset_right = 385.0
-offset_bottom = 472.0
+offset_left = 150.0
+offset_top = 85.0
+offset_right = 490.0
+offset_bottom = 281.0
 
-[node name="Content" type="VBoxContainer" parent="Panel" unique_id=1327367449]
+[node name="Content" type="HBoxContainer" parent="Panel" unique_id=959126634]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="LeftColumn" type="VBoxContainer" parent="Panel/Content" unique_id=410622508]
 layout_mode = 2
 
-[node name="PartyTitle" type="Label" parent="Panel/Content" unique_id=195926015]
+[node name="PartyTitle" type="Label" parent="Panel/Content/LeftColumn" unique_id=195926015]
 layout_mode = 2
 text = "Party"
 
-[node name="PartyOptionButton" type="OptionButton" parent="Panel/Content" unique_id=742067863]
+[node name="PartyOptionButton" type="OptionButton" parent="Panel/Content/LeftColumn" unique_id=742067863]
 layout_mode = 2
 
-[node name="AvailableModulesTitle" type="Label" parent="Panel/Content" unique_id=551685738]
-layout_mode = 2
-text = "Available Modules"
-
-[node name="AvailableModulesOptionButton" type="OptionButton" parent="Panel/Content" unique_id=2071818486]
-layout_mode = 2
-
-[node name="EquipButton" type="Button" parent="Panel/Content" unique_id=1781044996]
-layout_mode = 2
-text = "Equip Selected Module"
-
-[node name="EquippedModulesOptionButton" type="OptionButton" parent="Panel/Content" unique_id=306843666]
-layout_mode = 2
-
-[node name="UnequipButton" type="Button" parent="Panel/Content" unique_id=265746073]
-layout_mode = 2
-text = "Unequip Selected Module"
-
-[node name="FeedbackLabel" type="Label" parent="Panel/Content" unique_id=2007483401]
-layout_mode = 2
-
-[node name="LoadoutPanel" parent="Panel/Content" unique_id=1996070717 instance=ExtResource("1_1w4xw")]
+[node name="LoadoutPanel" parent="Panel/Content/LeftColumn" unique_id=1996070717 instance=ExtResource("1_1w4xw")]
 visible = true
 layout_mode = 2
 
-[connection signal="item_selected" from="Panel/Content/PartyOptionButton" to="." method="_on_party_option_button_item_selected"]
-[connection signal="item_selected" from="Panel/Content/AvailableModulesOptionButton" to="." method="_on_available_modules_option_button_item_selected"]
-[connection signal="pressed" from="Panel/Content/EquipButton" to="." method="_on_equip_button_pressed"]
-[connection signal="item_selected" from="Panel/Content/EquippedModulesOptionButton" to="." method="_on_equipped_modules_option_button_item_selected"]
-[connection signal="pressed" from="Panel/Content/UnequipButton" to="." method="_on_unequip_button_pressed"]
+[node name="RightColumn" type="VBoxContainer" parent="Panel/Content" unique_id=1365439194]
+layout_mode = 2
+
+[node name="AvailableModulesTitle" type="Label" parent="Panel/Content/RightColumn" unique_id=551685738]
+layout_mode = 2
+text = "Available Modules"
+
+[node name="AvailableModulesOptionButton" type="OptionButton" parent="Panel/Content/RightColumn" unique_id=2071818486]
+layout_mode = 2
+
+[node name="EquipButton" type="Button" parent="Panel/Content/RightColumn" unique_id=1781044996]
+layout_mode = 2
+text = "Equip Selected Module"
+
+[node name="EquippedModulesOptionButton" type="OptionButton" parent="Panel/Content/RightColumn" unique_id=306843666]
+layout_mode = 2
+
+[node name="UnequipButton" type="Button" parent="Panel/Content/RightColumn" unique_id=265746073]
+layout_mode = 2
+text = "Unequip Selected Module"
+
+[node name="FeedbackLabel" type="Label" parent="Panel/Content/RightColumn" unique_id=2007483401]
+layout_mode = 2
+
+[connection signal="item_selected" from="Panel/Content/LeftColumn/PartyOptionButton" to="." method="_on_party_option_button_item_selected"]
+[connection signal="item_selected" from="Panel/Content/RightColumn/AvailableModulesOptionButton" to="." method="_on_available_modules_option_button_item_selected"]
+[connection signal="pressed" from="Panel/Content/RightColumn/EquipButton" to="." method="_on_equip_button_pressed"]
+[connection signal="item_selected" from="Panel/Content/RightColumn/EquippedModulesOptionButton" to="." method="_on_equipped_modules_option_button_item_selected"]
+[connection signal="pressed" from="Panel/Content/RightColumn/UnequipButton" to="." method="_on_unequip_button_pressed"]

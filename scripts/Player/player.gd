@@ -5,6 +5,12 @@ extends CharacterBody2D
 @export var grid_columns: int = 10
 @export var grid_rows: int = 8
 @export var grid_origin: Vector2 = Vector2(160, 120)
+@export var blocked_cells: Array[Vector2i] = []
+@export var move_duration: float = 0.20
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+var is_moving: bool = false
+
+
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -31,11 +37,28 @@ func get_input_direction(event: InputEvent) -> Vector2:
 
 
 func try_move_one_cell(direction: Vector2) -> void:
+	if is_moving:
+		return
+
 	var next_position: Vector2 = position + direction * cell_size
 
-	if is_position_inside_grid(next_position):
-		position = next_position
+	if (
+		is_position_inside_grid(next_position)
+		and not is_position_blocked(next_position)
+	):
+		is_moving = true
+		if direction == Vector2.DOWN:
+			animated_sprite.play("walk_down")
+		var tween: Tween = create_tween()
 
+		tween.tween_property(
+			self,
+			"position",
+			next_position,
+			move_duration
+		)
+
+		tween.finished.connect(_on_move_finished)
 
 func is_position_inside_grid(target_position: Vector2) -> bool:
 	var half_cell: float = cell_size / 2.0
@@ -52,3 +75,24 @@ func is_position_inside_grid(target_position: Vector2) -> bool:
 		and target_position.y >= minimum_y
 		and target_position.y <= maximum_y
 	)
+
+func world_position_to_grid_cell(
+	world_position: Vector2
+) -> Vector2i:
+	var local_position: Vector2 = world_position - grid_origin
+
+	return Vector2i(
+		int(local_position.x / cell_size),
+		int(local_position.y / cell_size)
+	)
+
+func is_position_blocked(target_position: Vector2) -> bool:
+	var target_cell: Vector2i = world_position_to_grid_cell(
+		target_position
+	)
+
+	return blocked_cells.has(target_cell)
+
+func _on_move_finished() -> void:
+	is_moving = false
+	animated_sprite.stop()

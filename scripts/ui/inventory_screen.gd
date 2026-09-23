@@ -5,29 +5,33 @@ signal unequip_requested(module: ModuleDefinition)
 signal scrapture_selected(scrapture: ScraptureRuntime)
 
 
-
-@onready var loadout_panel: LoadoutPanel = ( # Loadout panel to display the loadout
-	$Panel/Content/LoadoutPanel
-)
-@onready var equip_button: Button = ( # Button to equip a module
-	$Panel/Content/EquipButton
-)
-@onready var unequip_button: Button = ( # Button to unequip a module
-	$Panel/Content/UnequipButton
+@onready var dim_background: ColorRect = $DimBackground
+@onready var loadout_panel: LoadoutPanel = (
+	$Panel/Content/LeftColumn/LoadoutPanel
 )
 
-@onready var available_modules_option_button: OptionButton = ( # Option button to display the available modules
-	$Panel/Content/AvailableModulesOptionButton
+@onready var equip_button: Button = (
+	$Panel/Content/RightColumn/EquipButton
+)
+
+@onready var unequip_button: Button = (
+	$Panel/Content/RightColumn/UnequipButton
+)
+
+@onready var available_modules_option_button: OptionButton = (
+	$Panel/Content/RightColumn/AvailableModulesOptionButton
 )
 
 @onready var equipped_modules_option_button: OptionButton = (
-	$Panel/Content/EquippedModulesOptionButton
-) 
-@onready var feedback_label: Label = (
-	$Panel/Content/FeedbackLabel
+	$Panel/Content/RightColumn/EquippedModulesOptionButton
 )
+
+@onready var feedback_label: Label = (
+	$Panel/Content/RightColumn/FeedbackLabel
+)
+
 @onready var party_option_button: OptionButton = (
-	$Panel/Content/PartyOptionButton
+	$Panel/Content/LeftColumn/PartyOptionButton
 )
 
 var selected_module: ModuleDefinition
@@ -119,3 +123,7 @@ func _on_party_option_button_item_selected(index: int) -> void:
 		return
 
 	scrapture_selected.emit(displayed_scraptures[index])
+
+func _ready() -> void:
+	dim_background.position = Vector2.ZERO
+	dim_background.size = get_viewport_rect().size

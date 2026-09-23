@@ -6,6 +6,7 @@ extends Node2D
 @export var cell_size: int = 32
 
 
+
 func _ready() -> void:
 	queue_redraw()
 

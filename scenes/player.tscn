@@ -2,9 +2,54 @@
 
 [ext_resource type="Script" uid="uid://c0ipy04wayrtl" path="res://scripts/Player/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://bmlekw6l8huvd" path="res://icon.svg" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://b7gfjsivhsnki" path="res://animations/zetz_walk_down_0.png" id="3_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://cknfdhtfjvxio" path="res://animations/zetz_walk_down_1.png" id="4_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://begn7wjxlum8r" path="res://animations/zetz_walk_down_2.png" id="5_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://crf25dhq3qb1g" path="res://animations/zetz_walk_down_3.png" id="6_jej6c"]
+[ext_resource type="Texture2D" uid="uid://dr7elro72p11i" path="res://animations/zetz_walk_down_4.png" id="7_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://b6y7wt3uxrcro" path="res://animations/zetz_walk_down_5.png" id="8_oprun"]
+[ext_resource type="Texture2D" uid="uid://cqcegnl1o6gts" path="res://animations/zetz_walk_down_6.png" id="9_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://fl33jlfvvtgi" path="res://animations/zetz_walk_down_7.png" id="10_qfm1y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lt3y"]
 size = Vector2(28, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0lt3y"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_y4r1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d2wvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3v2ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jej6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f1ej7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oprun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a8ls1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qfm1y")
+}],
+"loop": 1,
+"name": &"walk_down",
+"speed": 10.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=1800381545 groups=["player"]]
 script = ExtResource("1_3vyb7")
@@ -19,3 +64,14 @@ polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1576377128]
 shape = SubResource("RectangleShape2D_0lt3y")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=402116858]
+limit_left = 160
+limit_top = 120
+limit_right = 928
+limit_bottom = 632
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=558214148]
+sprite_frames = SubResource("SpriteFrames_0lt3y")
+animation = &"walk_down"
+frame_progress = 0.21168523

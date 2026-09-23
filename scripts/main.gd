@@ -1,7 +1,6 @@
 extends Node2D
 #@oneready - initiatlize the variable only once the node and the child exist
 #$ScrapLabel - find the child of the current node named scrapLabel
-@onready var scrap_label: Label = $HUD/ScrapLabel
 @onready var goal_label: Label = $HUD/GoalLabel
 var scrap_count: int = 0
 @export var scrap_goal: int = 3
@@ -11,14 +10,13 @@ var starter_scrapture: ScraptureRuntime #this is the scrapture that will be used
 var scrapture_party: Array[ScraptureRuntime] = []
 var selected_scrapture: ScraptureRuntime #this is the scrapture that will be used to store the selected scrapture
 var enemy_scrapture: ScraptureRuntime
-@onready var inventory_screen: InventoryScreen = $InventoryScreen
 @onready var player: CharacterBody2D = $Player
 @onready var battle: Battle = $Battle 
+@onready var inventory_screen: InventoryScreen = $HUD/InventoryScreen
 
 
 func _ready() -> void: 
 	connect_module_pickup_signals() #connect the module pickup signals
-	update_scrap_label() #display the label text right away
 	create_starter_scrapture() #create the starter scrapture
 	battle.battle_ended.connect(_on_battle_ended) #battle ended signal connection
 	battle.scrapture_captured.connect(_on_scrapture_captured) #scrapture captured signal connection
@@ -175,20 +173,13 @@ func _on_module_collected(module: ModuleDefinition) -> void:
 	module_inventory.add_module(module) #this is the command that will be sent to the collected modules array
 	inventory_screen.display_inventory(module_inventory) #this is the command that will be sent to the display inventory function
 	scrap_count += 1 #this is the command that will be sent to the scrap count variable
-	update_scrap_label() #this is the command that will be sent to the update scrap label function
 	check_scrap_goal() #this is the command that will be sent to the check scrap goal function
 
 	print("Collected module: ", module.display_name) #this is the command that will be sent to the print function
 	print("Modules owned: ", module_inventory.get_count()) #this is the command that will be sent to the print function
 
 
-func update_scrap_label() -> void: #this is the function that will be called to update the scrap label
-	scrap_label.text = (
-		"Scrap: " #this is the text that will be displayed in the scrap label
-		+ str(scrap_count)
-		+ " / "
-		+ str(scrap_goal) #this is the text that will be displayed in the scrap goal label
-	)
+
 #a function to check if we have reached our goal
 func check_scrap_goal() -> void: #this is the function that will be called to check if we have reached our goal
 	if scrap_count >= scrap_goal:
