@@ -1,9 +1,13 @@
 [gd_resource type="Resource" script_class="ScraptureDefinition" format=3 uid="uid://b7vk621n7wol8"]
 
+[ext_resource type="SpriteFrames" uid="uid://3wi5inseq7d" path="res://resources/scraptures/starter_battle_frames.tres" id="1_7whp3"]
 [ext_resource type="Script" uid="uid://b3q0tcykcnyer" path="res://scripts/scraptures/scrapture_definition.gd" id="1_ca7rg"]
+[ext_resource type="Texture2D" uid="uid://bnkuvtgxughtn" path="res://animations/starter/Idle/rotations/north.png" id="1_qnuoa"]
 
 [resource]
 script = ExtResource("1_ca7rg")
 display_name = "Starter"
 base_max_health = 20
+battle_texture = ExtResource("1_qnuoa")
+battle_sprite_frames = ExtResource("1_7whp3")
 metadata/_custom_type_script = "uid://b3q0tcykcnyer"

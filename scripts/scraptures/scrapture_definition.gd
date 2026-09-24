@@ -8,3 +8,4 @@ extends Resource # A Resource is a data container that can be saved to a file an
 @export var attachment_capacity: int = 3
 @export var overworld_texture: Texture2D 
 @export var battle_texture: Texture2D
+@export var battle_sprite_frames: SpriteFrames

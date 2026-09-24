@@ -1,6 +1,8 @@
 extends Node2D
 #@oneready - initiatlize the variable only once the node and the child exist
 #$ScrapLabel - find the child of the current node named scrapLabel
+
+
 @onready var goal_label: Label = $HUD/GoalLabel
 var scrap_count: int = 0
 @export var scrap_goal: int = 3
@@ -10,7 +12,7 @@ var starter_scrapture: ScraptureRuntime #this is the scrapture that will be used
 var scrapture_party: Array[ScraptureRuntime] = []
 var selected_scrapture: ScraptureRuntime #this is the scrapture that will be used to store the selected scrapture
 var enemy_scrapture: ScraptureRuntime
-@onready var player: CharacterBody2D = $Player
+@onready var player: Player = $Player
 @onready var battle: Battle = $Battle 
 @onready var inventory_screen: InventoryScreen = $HUD/InventoryScreen
 
@@ -48,7 +50,7 @@ func _on_unequip_requested(module: ModuleDefinition) -> void:
 
 
 func _on_battle_ended() -> void:
-	player.set_process_unhandled_input(true)
+	player.set_movement_enabled(true)
 	print_party()
 
 func _on_scrapture_captured(scrapture: ScraptureRuntime) -> void:
@@ -143,7 +145,9 @@ func _unhandled_input(event: InputEvent) -> void: #this is the function that wil
 			return
 
 		inventory_screen.visible = not inventory_screen.visible
-		player.set_process_unhandled_input(not inventory_screen.visible)
+		player.set_movement_enabled(
+			not inventory_screen.visible
+		)
 	if event.is_action_pressed("battle_basic_attack"):
 		battle.perform_basic_attack_round()
 	if event.is_action_pressed("battle_guard"):
@@ -259,4 +263,4 @@ func start_battle(
 		enemy_scrapture
 	)
 
-	player.set_process_unhandled_input(false)
+	player.set_movement_enabled(false)

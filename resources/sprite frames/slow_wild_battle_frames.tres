@@ -1,0 +1,47 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bryr2t6bjeecm"]
+
+[ext_resource type="Texture2D" uid="uid://c3sqjf4d8ej6u" path="res://animations/slow_wild/battle slow/Idle/animations/Idle/west/frame_000.png" id="1_nf3ph"]
+[ext_resource type="Texture2D" uid="uid://ibff48gfb66n" path="res://animations/slow_wild/battle slow/Idle/animations/Idle/west/frame_001.png" id="2_4ym3i"]
+[ext_resource type="Texture2D" uid="uid://dm6jni1ekdr8i" path="res://animations/slow_wild/battle slow/Idle/animations/Idle/west/frame_002.png" id="3_r25tn"]
+[ext_resource type="Texture2D" uid="uid://c4copj3ndllmj" path="res://animations/slow_wild/battle slow/Idle/animations/Idle/west/frame_003.png" id="4_1o48d"]
+[ext_resource type="Texture2D" uid="uid://btllje4wsdsey" path="res://animations/slow_wild/battle slow/Idle/animations/Idle/west/frame_004.png" id="5_dyo4b"]
+[ext_resource type="Texture2D" uid="uid://bcpcw12uu5w38" path="res://animations/slow_wild/battle slow/Idle/animations/Idle/west/frame_005.png" id="6_i6t1y"]
+[ext_resource type="Texture2D" uid="uid://ccmxmgrxgljxm" path="res://animations/slow_wild/battle slow/Idle/animations/Idle/west/frame_006.png" id="7_4vkih"]
+[ext_resource type="Texture2D" uid="uid://duetjxrr8sm3e" path="res://animations/slow_wild/battle slow/Idle/animations/Idle/west/frame_007.png" id="8_glrqk"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nf3ph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4ym3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r25tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1o48d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dyo4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i6t1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4vkih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_glrqk")
+}],
+"loop": 1,
+"name": &"battle_idle",
+"speed": 8.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]

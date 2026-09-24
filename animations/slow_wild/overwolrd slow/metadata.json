@@ -1,0 +1,36 @@
+{
+  "group_id": "353b5e3f-ac69-418d-b3e0-4658bd8a5022",
+  "states": [
+    {
+      "character": {
+        "id": "066f4165-c1e0-47bb-be9f-f0f6bdd78a71",
+        "name": "Idle",
+        "prompt": "Create a 24x24pixel art overworld sprite of the same Scrapture creature called Slow Wild.\n\nUse this exact creature identity:\nSlow Wild is a small-to-medium scrap-built robotic creature with a slow, sturdy, defensive look. It is a squat robotic scrap tortoise-lizard creature. It has a low-to-the-ground body, a wide rounded silhouette, short thick legs, a bulky shell-like back made of scrap plates, a short tail, and a small head that sticks forward from the body. It should feel heavy, stable, and slow.\n\nIts body is assembled from salvaged metal parts: uneven shell plates on its back, visible bolts and rivets, exposed mechanical joints at the legs, a few short cables or wires near the neck or legs, and rough handmade post-apocalyptic construction. Some parts should be slightly asymmetrical. It should look worn but functional.\n\nIts face should be cute and readable, not scary. Give it round glowing eyes, preferably yellow or warm amber, a small snout, and a friendly but sturdy expression.\n\nUse this color palette:\n- muted scrap-metal gray body\n- rusty brown or reddish-brown shell plates\n- small teal or cyan mechanical accent lights\n- optional small cream or beige underbody panels\n\nThis must be the same exact creature design as the battle sprite version. Keep the same silhouette, same shell plates, same face shape, same glowing eyes, same color palette, and same scrap-built identity.\n\nMake this version simplified for a 24x24 overworld sprite. Use a high top-down or 3/4 overworld game view suitable for a tile-based RPG. Keep the sprite readable and compact. Transparent background.",
+        "size": {
+          "width": 32,
+          "height": 32
+        },
+        "template_id": "dog",
+        "directions": 8,
+        "view": "high top-down",
+        "created_at": "2026-09-24T14:02:13.114207+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-09-24T15:01:09.723485"
+}

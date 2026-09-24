@@ -1,0 +1,50 @@
+{
+  "group_id": "515ded42-e5bc-4243-82c3-fc8abce38f94",
+  "states": [
+    {
+      "character": {
+        "id": "9809e742-103c-4583-b44f-c5f465337562",
+        "name": "Idle",
+        "prompt": "Create a high-quality pixel art battle sprite of a cute robotic rabbit creature for a turn-based monster-catching RPG. \nThis is the starter creature, so it should feel charming, approachable, and memorable. \nThe creature should have long rabbit ears, a small agile body, bright expressive eyes, and mechanical legs that suggest speed and jumping. \nIts body should be made from salvaged scrap parts: patched metal plating, bolts, exposed joints, tiny cables, and rough handmade construction. \nThe design should look post-apocalyptic but lovable, with a balance of softness and mechanical detail. \nKeep the silhouette very readable. \nPose it in a lively battle stance, facing slightly toward the viewer. \nPixel art style, polished and game-ready, with a transparent background.",
+        "size": {
+          "width": 128,
+          "height": 128
+        },
+        "template_id": "cat",
+        "directions": 8,
+        "view": "side",
+        "created_at": "2026-09-24T10:41:44.918780+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {
+          "The_character_shifts_its_weight_rhythmically_from": {
+            "north": [
+              "Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_000.png",
+              "Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_001.png",
+              "Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_002.png",
+              "Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_003.png",
+              "Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_004.png",
+              "Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_005.png",
+              "Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_006.png",
+              "Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_007.png",
+              "Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_008.png"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-09-24T10:59:53.240720"
+}

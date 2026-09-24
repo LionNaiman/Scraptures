@@ -1,0 +1,51 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://3wi5inseq7d"]
+
+[ext_resource type="Texture2D" uid="uid://be6vsuvkkxgse" path="res://animations/starter/Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_000.png" id="1_tbys1"]
+[ext_resource type="Texture2D" uid="uid://by1sofsxs4vuk" path="res://animations/starter/Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_001.png" id="2_hi7vx"]
+[ext_resource type="Texture2D" uid="uid://c5quwlahj0lli" path="res://animations/starter/Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_002.png" id="3_msfht"]
+[ext_resource type="Texture2D" uid="uid://ym1wtrog1epw" path="res://animations/starter/Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_003.png" id="4_461xp"]
+[ext_resource type="Texture2D" uid="uid://4d16j0376n5f" path="res://animations/starter/Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_004.png" id="5_u3yjp"]
+[ext_resource type="Texture2D" uid="uid://bahbskr54jlfv" path="res://animations/starter/Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_005.png" id="6_xh0hg"]
+[ext_resource type="Texture2D" uid="uid://b7odhfkn8vxec" path="res://animations/starter/Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_006.png" id="7_t42mk"]
+[ext_resource type="Texture2D" uid="uid://dwaj6timl4wqh" path="res://animations/starter/Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_007.png" id="8_p3m4w"]
+[ext_resource type="Texture2D" uid="uid://deq2mc7bmlvu6" path="res://animations/starter/Idle/animations/The_character_shifts_its_weight_rhythmically_from/north/frame_008.png" id="9_4gtrp"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tbys1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hi7vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_msfht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_461xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u3yjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xh0hg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t42mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p3m4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4gtrp")
+}],
+"loop": 1,
+"name": &"battle_idle",
+"speed": 8.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]

@@ -23,29 +23,40 @@ var current_state: BattleState = BattleState.INACTIVE
 var player_scrapture: ScraptureRuntime
 var enemy_scrapture: ScraptureRuntime
 @onready var player_health_label: Label = (
-	$BattleUI/HealthDisplay/PlayerHealthLabel
+	$BattleUI/BattleScreen/PlayerInfo/PlayerInfoBox/PlayerHealthLabel
 )
 
 @onready var enemy_health_label: Label = (
-	$BattleUI/HealthDisplay/EnemyHealthLabel
+	$BattleUI/BattleScreen/EnemyInfo/EnemyInfoBox/EnemyHealthLabel
 )
-@onready var enemy_battle_sprite: TextureRect = (
-	$BattleUI/EnemyBattleSprite
+@onready var enemy_battle_sprite: AnimatedSprite2D = (
+	$BattleUI/BattleScreen/EnemyBattleSprite
+)
+@onready var player_battle_sprite: AnimatedSprite2D = (
+	$BattleUI/BattleScreen/PlayerBattleSprite
 )
 @onready var result_label: Label = (
-	$BattleUI/HealthDisplay/ResultLabel
+	$BattleUI/BattleScreen/ResultLabel
 )
 @onready var battle_ui: CanvasLayer = $BattleUI # UI layer for the battle UI 
 @onready var module_move_1_button: Button = ( 
-	$BattleUI/ActionMenu/ModuleMove1Button
+	$BattleUI/BattleScreen/ActionMenu/ModuleMove1Button
 )
 @onready var module_move_2_button: Button = (
-	$BattleUI/ActionMenu/ModuleMove2Button
+	$BattleUI/BattleScreen/ActionMenu/ModuleMove2Button
 )
 
 @onready var action_menu: VBoxContainer = (
-	$BattleUI/ActionMenu
+	$BattleUI/BattleScreen/ActionMenu
 )
+@onready var player_health_bar: ProgressBar = (
+	$BattleUI/BattleScreen/PlayerInfo/PlayerInfoBox/PlayerHealthBar
+)
+
+@onready var enemy_health_bar: ProgressBar = (
+	$BattleUI/BattleScreen/EnemyInfo/EnemyInfoBox/EnemyHealthBar
+)
+
 
 
 
@@ -62,11 +73,35 @@ func initialize(
 	action_menu.visible = true
 	player_scrapture = player
 	enemy_scrapture = enemy
+	player_battle_sprite.sprite_frames = (
+	player_scrapture.definition.battle_sprite_frames
+	)	
+	print(
+		"Definition frames: ",
+		player_scrapture.definition.battle_sprite_frames
+	)
 
-	enemy_battle_sprite.texture = (
-	enemy_scrapture.definition.battle_texture
-)
+	print(
+		"Sprite frames after assignment: ",
+		player_battle_sprite.sprite_frames
+	)
 
+	print(
+		"Has battle_idle: ",
+		player_battle_sprite.sprite_frames.has_animation("battle_idle")
+	)
+	print(
+	"Animations in resource: ",
+	player_battle_sprite.sprite_frames.get_animation_names()
+	)
+	player_battle_sprite.play("battle_idle")
+
+	enemy_battle_sprite.sprite_frames = (
+		enemy_scrapture.definition.battle_sprite_frames
+	)
+
+	enemy_battle_sprite.play("battle_idle")
+	
 	update_module_move_buttons()
 	battle_ui.visible = true
 	current_state = BattleState.WAITING_FOR_PLAYER_ACTION
@@ -517,6 +552,20 @@ func update_health_display() -> void:
 		+ str(enemy_scrapture.current_health)
 		+ " / "
 		+ str(enemy_scrapture.get_final_max_health())
+	)
+
+	player_health_bar.max_value = (
+		player_scrapture.get_final_max_health()
+	)
+	player_health_bar.value = (
+		player_scrapture.current_health
+	)
+
+	enemy_health_bar.max_value = (
+		enemy_scrapture.get_final_max_health()
+	)
+	enemy_health_bar.value = (
+		enemy_scrapture.current_health
 	)
 
 func update_module_move_buttons() -> void:

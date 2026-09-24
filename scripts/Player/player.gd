@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 
@@ -7,30 +8,51 @@ extends CharacterBody2D
 @export var grid_origin: Vector2 = Vector2(160, 120)
 @export var blocked_cells: Array[Vector2i] = []
 @export var move_duration: float = 0.20
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
 var is_moving: bool = false
+var movement_enabled: bool = true
+var facing_direction: Vector2 = Vector2.DOWN
 
 
+func _ready() -> void:
+	play_idle_animation()
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	var direction: Vector2 = get_input_direction(event)
+func _physics_process(_delta: float) -> void:
+	if not movement_enabled:
+		if not is_moving:
+			play_idle_animation()
+		return
+
+	if is_moving:
+		return
+
+	var direction: Vector2 = get_input_direction()
 
 	if direction != Vector2.ZERO:
+		facing_direction = direction
 		try_move_one_cell(direction)
+	else:
+		play_idle_animation()
 
 
-func get_input_direction(event: InputEvent) -> Vector2:
-	if event.is_action_pressed("move_up"):
+func set_movement_enabled(enabled: bool) -> void:
+	movement_enabled = enabled
+
+
+func get_input_direction() -> Vector2:
+	if Input.is_action_pressed("move_up"):
 		return Vector2.UP
 
-	if event.is_action_pressed("move_down"):
+	if Input.is_action_pressed("move_down"):
 		return Vector2.DOWN
 
-	if event.is_action_pressed("move_left"):
+	if Input.is_action_pressed("move_left"):
 		return Vector2.LEFT
 
-	if event.is_action_pressed("move_right"):
+	if Input.is_action_pressed("move_right"):
 		return Vector2.RIGHT
 
 	return Vector2.ZERO
@@ -47,8 +69,8 @@ func try_move_one_cell(direction: Vector2) -> void:
 		and not is_position_blocked(next_position)
 	):
 		is_moving = true
-		if direction == Vector2.DOWN:
-			animated_sprite.play("walk_down")
+		play_walk_animation(direction)
+
 		var tween: Tween = create_tween()
 
 		tween.tween_property(
@@ -59,15 +81,69 @@ func try_move_one_cell(direction: Vector2) -> void:
 		)
 
 		tween.finished.connect(_on_move_finished)
+	else:
+		play_idle_animation()
 
-func is_position_inside_grid(target_position: Vector2) -> bool:
+
+func play_walk_animation(direction: Vector2) -> void:
+	var animation_name: String = (
+		"walk_" + get_direction_name(direction)
+	)
+
+	play_animation_if_needed(animation_name)
+
+
+func play_idle_animation() -> void:
+	var animation_name: String = (
+		"idle_" + get_direction_name(facing_direction)
+	)
+
+	play_animation_if_needed(animation_name)
+
+
+func play_animation_if_needed(animation_name: String) -> void:
+	if (
+		animated_sprite.animation != animation_name
+		or not animated_sprite.is_playing()
+	):
+		animated_sprite.play(animation_name)
+
+
+func get_direction_name(direction: Vector2) -> String:
+	if direction == Vector2.UP:
+		return "up"
+
+	if direction == Vector2.DOWN:
+		return "down"
+
+	if direction == Vector2.LEFT:
+		return "left"
+
+	if direction == Vector2.RIGHT:
+		return "right"
+
+	return "down"
+
+
+func is_position_inside_grid(
+	target_position: Vector2
+) -> bool:
 	var half_cell: float = cell_size / 2.0
 
 	var minimum_x: float = grid_origin.x + half_cell
 	var minimum_y: float = grid_origin.y + half_cell
 
-	var maximum_x: float = grid_origin.x + (grid_columns * cell_size) - half_cell
-	var maximum_y: float = grid_origin.y + (grid_rows * cell_size) - half_cell
+	var maximum_x: float = (
+		grid_origin.x
+		+ (grid_columns * cell_size)
+		- half_cell
+	)
+
+	var maximum_y: float = (
+		grid_origin.y
+		+ (grid_rows * cell_size)
+		- half_cell
+	)
 
 	return (
 		target_position.x >= minimum_x
@@ -76,23 +152,29 @@ func is_position_inside_grid(target_position: Vector2) -> bool:
 		and target_position.y <= maximum_y
 	)
 
+
 func world_position_to_grid_cell(
 	world_position: Vector2
 ) -> Vector2i:
-	var local_position: Vector2 = world_position - grid_origin
+	var local_position: Vector2 = (
+		world_position - grid_origin
+	)
 
 	return Vector2i(
 		int(local_position.x / cell_size),
 		int(local_position.y / cell_size)
 	)
 
-func is_position_blocked(target_position: Vector2) -> bool:
-	var target_cell: Vector2i = world_position_to_grid_cell(
-		target_position
+
+func is_position_blocked(
+	target_position: Vector2
+) -> bool:
+	var target_cell: Vector2i = (
+		world_position_to_grid_cell(target_position)
 	)
 
 	return blocked_cells.has(target_cell)
 
+
 func _on_move_finished() -> void:
 	is_moving = false
-	animated_sprite.stop()

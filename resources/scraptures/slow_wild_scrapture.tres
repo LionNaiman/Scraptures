@@ -1,18 +1,16 @@
 [gd_resource type="Resource" script_class="ScraptureDefinition" format=3 uid="uid://bphuqqy7w2hbs"]
 
-[ext_resource type="Texture2D" uid="uid://cpe56mp757nfi" path="res://sprites/slow wild battle.png" id="1_b21fb"]
-[ext_resource type="Texture2D" uid="uid://ce105i7nefowa" path="res://sprites/pixellab-Create-a-single-2D-pixel-art-o-1789896390996.png" id="1_j6dv8"]
+[ext_resource type="SpriteFrames" uid="uid://bryr2t6bjeecm" path="res://resources/sprite frames/slow_wild_battle_frames.tres" id="1_b21fb"]
+[ext_resource type="Texture2D" uid="uid://dr7t4uxcd6n0d" path="res://animations/slow_wild/battle slow/Idle/rotations/west.png" id="1_j6dv8"]
 [ext_resource type="Script" uid="uid://b3q0tcykcnyer" path="res://scripts/scraptures/scrapture_definition.gd" id="1_tqukt"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2lv3"]
-atlas = ExtResource("1_j6dv8")
-region = Rect2(0, 160, 32, 32)
+[ext_resource type="Texture2D" uid="uid://bxocuejbemj0j" path="res://animations/slow_wild/overwolrd slow/Idle/rotations/west.png" id="3_tp1ny"]
 
 [resource]
 script = ExtResource("1_tqukt")
 display_name = "Slow Wild"
 base_max_health = 20
 base_speed = 3
-overworld_texture = SubResource("AtlasTexture_d2lv3")
-battle_texture = ExtResource("1_b21fb")
+overworld_texture = ExtResource("3_tp1ny")
+battle_texture = ExtResource("1_j6dv8")
+battle_sprite_frames = ExtResource("1_b21fb")
 metadata/_custom_type_script = "uid://b3q0tcykcnyer"

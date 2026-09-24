@@ -454,6 +454,7 @@ color = Color(0.14538461, 0.7376643, 0.63657504, 1)
 
 [node name="SlowWildEncounter" parent="." unique_id=400659884 instance=ExtResource("12_eb6dy")]
 position = Vector2(272, 200)
+scale = Vector2(0.7, 0.7)
 scrapture_definition = ExtResource("13_trceg")
 
 [node name="FinalEncounter" parent="." unique_id=1318858485 instance=ExtResource("12_eb6dy")]

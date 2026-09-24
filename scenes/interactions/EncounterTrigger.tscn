@@ -20,4 +20,9 @@ visible = false
 color = Color(0.7797995, 0.6143179, 0.08441768, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
+[node name="WanderTimer" type="Timer" parent="." unique_id=46174091]
+wait_time = 1.5
+autostart = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="WanderTimer" to="." method="_on_wander_timer_timeout"]
