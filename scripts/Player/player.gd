@@ -8,7 +8,7 @@ extends CharacterBody2D
 @export var grid_origin: Vector2 = Vector2(160, 120)
 @export var blocked_cells: Array[Vector2i] = []
 @export var move_duration: float = 0.20
-
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var is_moving: bool = false
@@ -64,10 +64,7 @@ func try_move_one_cell(direction: Vector2) -> void:
 
 	var next_position: Vector2 = position + direction * cell_size
 
-	if (
-		is_position_inside_grid(next_position)
-		and not is_position_blocked(next_position)
-	):
+	if not is_position_blocked_by_map(next_position):	
 		is_moving = true
 		play_walk_animation(direction)
 
@@ -178,3 +175,22 @@ func is_position_blocked(
 
 func _on_move_finished() -> void:
 	is_moving = false
+
+func is_position_blocked_by_map(
+	target_position: Vector2
+) -> bool:
+	var query := PhysicsPointQueryParameters2D.new()
+
+	query.position = (
+		collision_shape.global_position
+		+ (target_position - position)
+	)
+
+	query.collision_mask = 1
+	query.collide_with_areas = true
+	query.collide_with_bodies = true
+
+	var space_state := get_world_2d().direct_space_state
+	var results := space_state.intersect_point(query, 1)
+
+	return not results.is_empty()

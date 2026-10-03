@@ -33,21 +33,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.29954746, 0.29954746, 0.29954743, 1)
 
 [node name="PlayerBattleSprite" type="AnimatedSprite2D" parent="BattleUI/BattleScreen" unique_id=2016902845]
 z_index = 10
-position = Vector2(289, 291)
-scale = Vector2(0.8333333, 0.8452381)
+position = Vector2(147.5, 400.5)
+scale = Vector2(1.4107141, 1.4226189)
 sprite_frames = ExtResource("2_k0i46")
 animation = &"battle_idle"
 
 [node name="EnemyBattleSprite" type="AnimatedSprite2D" parent="BattleUI/BattleScreen" unique_id=852611788]
-position = Vector2(559, 63)
+position = Vector2(824, 118.00001)
+scale = Vector2(1.5, 1.5892857)
 sprite_frames = SubResource("SpriteFrames_xkmjw")
 
 [node name="ActionMenu" type="VBoxContainer" parent="BattleUI/BattleScreen" unique_id=455589243]
@@ -90,9 +89,9 @@ offset_bottom = 48.0
 
 [node name="EnemyInfo" type="PanelContainer" parent="BattleUI/BattleScreen" unique_id=1186916684]
 layout_mode = 0
-offset_left = 240.0
+offset_left = 600.0
 offset_top = 9.0
-offset_right = 420.0
+offset_right = 780.0
 offset_bottom = 54.0
 
 [node name="EnemyInfoBox" type="VBoxContainer" parent="BattleUI/BattleScreen/EnemyInfo" unique_id=2019605423]
@@ -109,9 +108,9 @@ show_percentage = false
 
 [node name="PlayerInfo" type="PanelContainer" parent="BattleUI/BattleScreen" unique_id=1686538705]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 295.0
-offset_right = 56.0
+offset_left = 240.0
+offset_top = 293.0
+offset_right = 420.0
 offset_bottom = 337.0
 
 [node name="PlayerInfoBox" type="VBoxContainer" parent="BattleUI/BattleScreen/PlayerInfo" unique_id=989196956]

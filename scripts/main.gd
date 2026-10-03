@@ -12,7 +12,7 @@ var starter_scrapture: ScraptureRuntime #this is the scrapture that will be used
 var scrapture_party: Array[ScraptureRuntime] = []
 var selected_scrapture: ScraptureRuntime #this is the scrapture that will be used to store the selected scrapture
 var enemy_scrapture: ScraptureRuntime
-@onready var player: Player = $Player
+@onready var player: Player = $WorldSort/Player
 @onready var battle: Battle = $Battle 
 @onready var inventory_screen: InventoryScreen = $HUD/InventoryScreen
 

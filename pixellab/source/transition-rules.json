@@ -1,0 +1,28 @@
+{
+  "transitions": [
+    {
+      "from": "worn green grass turf dotted with tiny wildflowers, sparse weeds, scattered metal bolts, subtle rust stains, and occasional mechanical debris featuring soft gentle lighting and moderate surface texture",
+      "to": "weathered scrap-strewn earth featuring overlapping flat metal plates, cable fragments, exposed screws, rusted parts, interspersed dirt patches, and grass tufts growing through cracks under soft diffused illumination",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "ac3fb87e-1cff-4282-824a-6970118901a8",
+      "transitionSize": 0.25
+    },
+    {
+      "from": "compacted earthy dirt with moderate surface grain and gentle tonal variation creating soft depth",
+      "to": "worn green grass turf dotted with tiny wildflowers, sparse weeds, scattered metal bolts, subtle rust stains, and occasional mechanical debris featuring soft gentle lighting and moderate surface texture",
+      "fromId": 3,
+      "toId": 1,
+      "tilesetId": "98456a44-ea47-4253-98ef-97e9a90746b7",
+      "transitionSize": 0.25
+    },
+    {
+      "from": "shimmering wavy water surface with moderate ripples and soft deep blue-green highlights and shadows",
+      "to": "worn green grass turf dotted with tiny wildflowers, sparse weeds, scattered metal bolts, subtle rust stains, and occasional mechanical debris featuring soft gentle lighting and moderate surface texture",
+      "fromId": 4,
+      "toId": 1,
+      "tilesetId": "664883a4-c7b2-4188-a6ea-9ec1c3e40b6f",
+      "transitionSize": 0.25
+    }
+  ]
+}

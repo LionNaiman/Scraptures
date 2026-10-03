@@ -1,0 +1,642 @@
+{
+  "version": "1.0.0",
+  "totalObjects": 24,
+  "objects": [
+    {
+      "id": "e6adf19f-7da9-4126-91ac-b007652cd527",
+      "name": "Object 0",
+      "filename": "e6adf19f-7da9-4126-91ac-b007652cd527.png",
+      "boundingBox": {
+        "x": -1,
+        "y": 266,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 22.0,
+        "y": 342.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-24T15:55:09.750Z"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "04389aa5-6b51-4a9b-8adb-7d23486ef20d",
+      "name": "Object 0 (Copy)",
+      "filename": "04389aa5-6b51-4a9b-8adb-7d23486ef20d.png",
+      "boundingBox": {
+        "x": 114,
+        "y": 417,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 137.0,
+        "y": 493.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-24T15:59:31.881Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "0ac9a633-28ea-4ac0-9d2a-e347453e0072",
+      "name": "Object 0 (Copy 2)",
+      "filename": "0ac9a633-28ea-4ac0-9d2a-e347453e0072.png",
+      "boundingBox": {
+        "x": 249,
+        "y": 139,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 272.0,
+        "y": 215.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-24T15:59:37.013Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "23e0dbc8-566c-4296-9210-98db9d2cadd1",
+      "name": "Object 0 (Copy 3)",
+      "filename": "23e0dbc8-566c-4296-9210-98db9d2cadd1.png",
+      "boundingBox": {
+        "x": 350,
+        "y": -46,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 373.0,
+        "y": 30.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-24T15:59:40.452Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "5ddb8d4b-6c02-4a18-9d00-3dd1788be006",
+      "name": "Object 0 (Copy 4)",
+      "filename": "5ddb8d4b-6c02-4a18-9d00-3dd1788be006.png",
+      "boundingBox": {
+        "x": 181,
+        "y": -21,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 204.0,
+        "y": 55.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-24T15:59:45.872Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "32ce29c4-485a-4caf-8327-8c7c71429137",
+      "name": "Object 0 (Copy 5)",
+      "filename": "32ce29c4-485a-4caf-8327-8c7c71429137.png",
+      "boundingBox": {
+        "x": 88,
+        "y": 225,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 111.0,
+        "y": 301.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-24T15:59:50.223Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "b7b65d37-1ced-4926-a2f3-3a6d295246d9",
+      "name": "Object 0 (Copy 6)",
+      "filename": "b7b65d37-1ced-4926-a2f3-3a6d295246d9.png",
+      "boundingBox": {
+        "x": 410,
+        "y": 526,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 433.0,
+        "y": 602.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-24T15:59:55.022Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "9de1e574-4616-49d8-ac54-db78c0a2f0c1",
+      "name": "Object 0 (Copy 7)",
+      "filename": "9de1e574-4616-49d8-ac54-db78c0a2f0c1.png",
+      "boundingBox": {
+        "x": 448,
+        "y": 86,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 471.0,
+        "y": 162.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-24T15:59:58.663Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "928f69e4-31c7-4ac5-b0e3-1e68ef64da44",
+      "name": "Object 0 (Copy 8)",
+      "filename": "928f69e4-31c7-4ac5-b0e3-1e68ef64da44.png",
+      "boundingBox": {
+        "x": 688,
+        "y": 11,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 711.0,
+        "y": 87.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-24T16:02:29.408Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "8879c22d-d243-4413-9e38-ac69049589b9",
+      "name": "Object 0 (Copy 9)",
+      "filename": "8879c22d-d243-4413-9e38-ac69049589b9.png",
+      "boundingBox": {
+        "x": 674,
+        "y": 182,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 697.0,
+        "y": 258.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-25T15:45:08.062Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "0a99428b-0f3b-4837-a83f-50bc40b0e5f7",
+      "name": "Object 0 (Copy 10)",
+      "filename": "0a99428b-0f3b-4837-a83f-50bc40b0e5f7.png",
+      "boundingBox": {
+        "x": 615,
+        "y": 325,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 638.0,
+        "y": 401.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-25T15:45:24.764Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "6b20c175-5975-4bb3-8497-2fe4a6738f1f",
+      "name": "Object 0 (Copy 11)",
+      "filename": "6b20c175-5975-4bb3-8497-2fe4a6738f1f.png",
+      "boundingBox": {
+        "x": 827,
+        "y": 80,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 850.0,
+        "y": 156.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-25T15:45:34.145Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "0d1b90ce-b7a7-4e89-858d-61a97e654837",
+      "name": "Object 0 (Copy 12)",
+      "filename": "0d1b90ce-b7a7-4e89-858d-61a97e654837.png",
+      "boundingBox": {
+        "x": 1043,
+        "y": 41,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 1066.0,
+        "y": 117.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-25T15:45:35.778Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "f82ec594-b763-4d73-a7e3-4fb2d610c599",
+      "name": "Object 0 (Copy 13)",
+      "filename": "f82ec594-b763-4d73-a7e3-4fb2d610c599.png",
+      "boundingBox": {
+        "x": 694,
+        "y": 469,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 717.0,
+        "y": 545.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-25T15:45:36.795Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "911ab8cc-e09d-4049-9d67-aab70f4a1364",
+      "name": "Object 0 (Copy 14)",
+      "filename": "911ab8cc-e09d-4049-9d67-aab70f4a1364.png",
+      "boundingBox": {
+        "x": 833,
+        "y": 308,
+        "width": 81,
+        "height": 101
+      },
+      "groundBounds": {
+        "x": 856.0,
+        "y": 384.0,
+        "width": 35.0,
+        "height": 25.0
+      },
+      "layer": 1,
+      "visible": true,
+      "locked": false,
+      "description": "simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland",
+      "metadata": {
+        "lastEdited": "2026-09-24T15:55:10.478707",
+        "generatedAt": "2026-09-25T15:45:37.478Z",
+        "duplicatedFromObjectId": "e6adf19f-7da9-4126-91ac-b007652cd527"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "b16dec6e-6d30-49e7-8496-eb46d0bc68bb",
+      "name": "Idle",
+      "filename": "b16dec6e-6d30-49e7-8496-eb46d0bc68bb.png",
+      "boundingBox": {
+        "x": 42,
+        "y": 176.1999969482422,
+        "width": 24,
+        "height": 24
+      },
+      "groundBounds": {
+        "x": 47.0,
+        "y": 193.1999969482422,
+        "width": 15.0,
+        "height": 6.0
+      },
+      "layer": 16,
+      "visible": true,
+      "locked": false,
+      "description": "Character: Idle (south)",
+      "metadata": {
+        "generatedAt": "2026-09-25T15:46:18.559Z"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "a66c066f-220d-412c-a580-1fd61c8c1f1d",
+      "name": "Object 0",
+      "filename": "a66c066f-220d-412c-a580-1fd61c8c1f1d.png",
+      "boundingBox": {
+        "x": 367.5,
+        "y": 229,
+        "width": 27,
+        "height": 21
+      },
+      "groundBounds": {
+        "x": 371.5,
+        "y": 245.0,
+        "width": 20.0,
+        "height": 5.0
+      },
+      "layer": 17,
+      "visible": true,
+      "locked": false,
+      "description": "a pile of post apocalyptic metal scraps",
+      "metadata": {
+        "generatedAt": "2026-09-25T16:05:51.615Z"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "a6b34564-9ea9-4f89-a12b-76f319248c3e",
+      "name": "Object 0 (Copy 15)",
+      "filename": "a6b34564-9ea9-4f89-a12b-76f319248c3e.png",
+      "boundingBox": {
+        "x": 580,
+        "y": 423,
+        "width": 27,
+        "height": 21
+      },
+      "groundBounds": {
+        "x": 584.0,
+        "y": 439.0,
+        "width": 20.0,
+        "height": 5.0
+      },
+      "layer": 17,
+      "visible": true,
+      "locked": false,
+      "description": "a pile of post apocalyptic metal scraps",
+      "metadata": {
+        "generatedAt": "2026-09-25T16:06:15.616Z",
+        "duplicatedFromObjectId": "a66c066f-220d-412c-a580-1fd61c8c1f1d"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "d3d27046-d6bd-4990-a1c2-2b3bc7421a87",
+      "name": "Object 0 (Copy 16)",
+      "filename": "d3d27046-d6bd-4990-a1c2-2b3bc7421a87.png",
+      "boundingBox": {
+        "x": 645.5,
+        "y": 169.5,
+        "width": 27,
+        "height": 21
+      },
+      "groundBounds": {
+        "x": 649.5,
+        "y": 185.5,
+        "width": 20.0,
+        "height": 5.0
+      },
+      "layer": 17,
+      "visible": true,
+      "locked": false,
+      "description": "a pile of post apocalyptic metal scraps",
+      "metadata": {
+        "generatedAt": "2026-09-25T16:06:20.002Z",
+        "duplicatedFromObjectId": "a66c066f-220d-412c-a580-1fd61c8c1f1d"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "c22f5d91-20cd-48a2-9d48-c4650ffa4716",
+      "name": "Object 0 (Copy 17)",
+      "filename": "c22f5d91-20cd-48a2-9d48-c4650ffa4716.png",
+      "boundingBox": {
+        "x": 550.5,
+        "y": 545.5,
+        "width": 27,
+        "height": 21
+      },
+      "groundBounds": {
+        "x": 554.5,
+        "y": 561.5,
+        "width": 20.0,
+        "height": 5.0
+      },
+      "layer": 17,
+      "visible": true,
+      "locked": false,
+      "description": "a pile of post apocalyptic metal scraps",
+      "metadata": {
+        "generatedAt": "2026-09-25T16:06:20.431Z",
+        "duplicatedFromObjectId": "a66c066f-220d-412c-a580-1fd61c8c1f1d"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "a67e2d80-bad2-4c05-87bf-a8066440baf3",
+      "name": "Object 0 (Copy 18)",
+      "filename": "a67e2d80-bad2-4c05-87bf-a8066440baf3.png",
+      "boundingBox": {
+        "x": 649.5,
+        "y": 31.5,
+        "width": 27,
+        "height": 21
+      },
+      "groundBounds": {
+        "x": 653.5,
+        "y": 47.5,
+        "width": 20.0,
+        "height": 5.0
+      },
+      "layer": 17,
+      "visible": true,
+      "locked": false,
+      "description": "a pile of post apocalyptic metal scraps",
+      "metadata": {
+        "generatedAt": "2026-09-25T16:06:20.602Z",
+        "duplicatedFromObjectId": "a66c066f-220d-412c-a580-1fd61c8c1f1d"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "79a3d23d-315a-47e0-905e-f53e1e289c5d",
+      "name": "Object 0 (Copy 19)",
+      "filename": "79a3d23d-315a-47e0-905e-f53e1e289c5d.png",
+      "boundingBox": {
+        "x": 831.5,
+        "y": 241.5,
+        "width": 27,
+        "height": 21
+      },
+      "groundBounds": {
+        "x": 835.5,
+        "y": 257.5,
+        "width": 20.0,
+        "height": 5.0
+      },
+      "layer": 17,
+      "visible": true,
+      "locked": false,
+      "description": "a pile of post apocalyptic metal scraps",
+      "metadata": {
+        "generatedAt": "2026-09-25T16:06:20.764Z",
+        "duplicatedFromObjectId": "a66c066f-220d-412c-a580-1fd61c8c1f1d"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "75305e41-d97c-46a6-9c4e-424729cead25",
+      "name": "Object 0 (Copy 20)",
+      "filename": "75305e41-d97c-46a6-9c4e-424729cead25.png",
+      "boundingBox": {
+        "x": 838.5,
+        "y": 570.5,
+        "width": 27,
+        "height": 21
+      },
+      "groundBounds": {
+        "x": 842.5,
+        "y": 586.5,
+        "width": 20.0,
+        "height": 5.0
+      },
+      "layer": 17,
+      "visible": true,
+      "locked": false,
+      "description": "a pile of post apocalyptic metal scraps",
+      "metadata": {
+        "generatedAt": "2026-09-25T16:06:20.917Z",
+        "duplicatedFromObjectId": "a66c066f-220d-412c-a580-1fd61c8c1f1d"
+      },
+      "isProgress": false
+    },
+    {
+      "id": "25c4c644-a5a4-4b7f-9182-afa2db7fa0f4",
+      "name": "Object 0 (Copy 21)",
+      "filename": "25c4c644-a5a4-4b7f-9182-afa2db7fa0f4.png",
+      "boundingBox": {
+        "x": 264.5,
+        "y": 548.5,
+        "width": 27,
+        "height": 21
+      },
+      "groundBounds": {
+        "x": 268.5,
+        "y": 564.5,
+        "width": 20.0,
+        "height": 5.0
+      },
+      "layer": 17,
+      "visible": true,
+      "locked": false,
+      "description": "a pile of post apocalyptic metal scraps",
+      "metadata": {
+        "generatedAt": "2026-09-25T16:06:23.311Z",
+        "duplicatedFromObjectId": "a66c066f-220d-412c-a580-1fd61c8c1f1d"
+      },
+      "isProgress": false
+    }
+  ]
+}

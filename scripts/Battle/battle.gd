@@ -209,7 +209,7 @@ func end_battle(defeated_scrapture: ScraptureRuntime) -> void:
 	else:
 		print("Player lost the battle.")
 		result_label.text = "Defeat!"
-	
+	battle_ui.visible = false
 	battle_ended.emit()
 
 func perform_basic_attack_round() -> void:
@@ -516,6 +516,7 @@ func perform_capture_attempt() -> void:
 	result_label.text = "Captured!"
 
 	scrapture_captured.emit(enemy_scrapture)
+	battle_ui.visible = false
 	battle_ended.emit()
 
 func perform_granted_move_at_index(index: int) -> void:

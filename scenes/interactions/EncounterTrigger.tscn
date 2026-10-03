@@ -7,6 +7,7 @@
 size = Vector2(32, 32)
 
 [node name="EncounterTrigger" type="Area2D" unique_id=400659884]
+collision_layer = 2
 script = ExtResource("1_wh713")
 
 [node name="ScraptureSprite" type="Sprite2D" parent="." unique_id=1056452530]

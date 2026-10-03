@@ -1,0 +1,116 @@
+{
+  "version": "1.0.0",
+  "name": "Untitled Map",
+  "exportDate": "2026-09-25T16:07:11.665901Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 32,
+    "dimensions": {
+      "width": 41,
+      "height": 22,
+      "pixelWidth": 1312,
+      "pixelHeight": 704
+    },
+    "boundingBox": {
+      "maxX": 39,
+      "maxY": 20,
+      "minX": -1,
+      "minY": -1
+    }
+  },
+  "terrains": [
+    {
+      "id": 4,
+      "name": "shimmering wavy water surface with moderate ripples and soft deep blue-green highlights and shadows",
+      "color": "#2563eb",
+      "baseTileId": "21f222d4-7e36-44af-baed-e6dac70cb280",
+      "walkable": null
+    },
+    {
+      "id": 1,
+      "name": "worn green grass turf dotted with tiny wildflowers, sparse weeds, scattered metal bolts, subtle rust stains, and occasional mechanical debris featuring soft gentle lighting and moderate surface texture",
+      "color": "#22c55e",
+      "baseTileId": "dbac78ce-9446-4f79-8be0-2261a1cd6af7",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "weathered scrap-strewn earth featuring overlapping flat metal plates, cable fragments, exposed screws, rusted parts, interspersed dirt patches, and grass tufts growing through cracks under soft diffused illumination",
+      "color": "#22c55e",
+      "baseTileId": "bb65eb4e-15fd-465d-947b-923d52ec6501",
+      "walkable": null
+    },
+    {
+      "id": 3,
+      "name": "compacted earthy dirt with moderate surface grain and gentle tonal variation creating soft depth",
+      "color": "#92400e",
+      "baseTileId": "c37764dc-423d-488c-b7a7-57b03e3f4e3e",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "ac3fb87e-1cff-4282-824a-6970118901a8",
+      "filename": "worn green grass turf dotted with tiny wildflowers, sparse weeds, scattered metal bolts, su-c9e6e814.png",
+      "lowerTerrain": "worn green grass turf dotted with tiny wildflowers, sparse weeds, scattered metal bolts, subtle rust stains, and occasional mechanical debris featuring soft gentle lighting and moderate surface texture",
+      "upperTerrain": "weathered scrap-strewn earth featuring overlapping flat metal plates, cable fragments, exposed screws, rusted parts, interspersed dirt patches, and grass tufts growing through cracks under soft diffused illumination",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "narrow natural edge where patchy green grass gradually gives way to scattered scrap, rusted metal shards, cracked earth, weeds, and small mechanical debris with soft ambient shadowing across the shallow drop",
+      "tileSize": 32,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down",
+      "metadataFilename": "ac3fb87e-1cff-4282-824a-6970118901a8.json"
+    },
+    {
+      "id": "98456a44-ea47-4253-98ef-97e9a90746b7",
+      "filename": "compacted earthy dirt with moderate surface grain and gentle tonal variation creating soft-d12d1228.png",
+      "lowerTerrain": "compacted earthy dirt with moderate surface grain and gentle tonal variation creating soft depth",
+      "upperTerrain": "worn green grass turf dotted with tiny wildflowers, sparse weeds, scattered metal bolts, subtle rust stains, and occasional mechanical debris featuring soft gentle lighting and moderate surface texture",
+      "lowerTerrainId": 3,
+      "upperTerrainId": 1,
+      "transitionSize": 0.25,
+      "transitionDescription": "crumbling muddy dirt wall with embedded pebbles and damp patches casting soft shadows",
+      "tileSize": 32,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down",
+      "metadataFilename": "98456a44-ea47-4253-98ef-97e9a90746b7.json"
+    },
+    {
+      "id": "664883a4-c7b2-4188-a6ea-9ec1c3e40b6f",
+      "filename": "shimmering wavy water surface with moderate ripples and soft deep blue-green highlights and-2591ad5c.png",
+      "lowerTerrain": "shimmering wavy water surface with moderate ripples and soft deep blue-green highlights and shadows",
+      "upperTerrain": "worn green grass turf dotted with tiny wildflowers, sparse weeds, scattered metal bolts, subtle rust stains, and occasional mechanical debris featuring soft gentle lighting and moderate surface texture",
+      "lowerTerrainId": 4,
+      "upperTerrainId": 1,
+      "transitionSize": 0.25,
+      "transitionDescription": "thin crumbling muddy dirt lip with gentle surface texture, soft earthy color variation, and mild shading",
+      "tileSize": 32,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down",
+      "metadataFilename": "664883a4-c7b2-4188-a6ea-9ec1c3e40b6f.json"
+    }
+  ],
+  "overlays": [
+    {
+      "id": 0,
+      "filename": "overlay-0.png",
+      "type": "inpainting",
+      "dimensions": {
+        "width": 736,
+        "height": 608
+      },
+      "worldCoordinates": {
+        "x": 160,
+        "y": 32
+      },
+      "layer": "custom"
+    }
+  ],
+  "background": null,
+  "mapId": "66c7260c-9e5d-483d-8bfe-777efbb32275"
+}

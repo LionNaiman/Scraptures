@@ -17,7 +17,7 @@ var spawn_position: Vector2
 var is_moving: bool = false
 
 @onready var scrapture_sprite: Sprite2D = $ScraptureSprite
-
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 func _ready() -> void:
 	spawn_position = position
@@ -28,6 +28,28 @@ func _ready() -> void:
 	scrapture_sprite.texture = (
 		scrapture_definition.overworld_texture
 	)
+
+
+func is_position_blocked_by_map(
+	target_position: Vector2
+) -> bool:
+	var query := PhysicsShapeQueryParameters2D.new()
+
+	query.shape = collision_shape.shape
+	query.collide_with_areas = true
+	query.collide_with_bodies = true
+	query.collision_mask = 1
+
+	var target_transform := collision_shape.global_transform
+	target_transform.origin += target_position - global_position
+
+	query.transform = target_transform
+
+	var space_state := get_world_2d().direct_space_state
+	var results := space_state.intersect_shape(query)
+
+	return not results.is_empty()
+
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -76,6 +98,9 @@ func _on_wander_timer_timeout() -> void:
 		return
 
 	if abs(target_position.y - spawn_position.y) > max_distance:
+		return
+
+	if is_position_blocked_by_map(target_position):
 		return
 
 	is_moving = true

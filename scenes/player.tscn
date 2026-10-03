@@ -51,7 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://jxyo822kj8u2" path="res://animations/walking/north/frame_007.png" id="49_jx8is"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lt3y"]
-size = Vector2(28, 28)
+size = Vector2(16, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0lt3y"]
 animations = [{

@@ -1,0 +1,804 @@
+[gd_scene format=4 uid="uid://bh31dwh1t0guy"]
+
+[ext_resource type="Texture2D" uid="uid://p1vlmkntkue1" path="res://pixellab/source/tilesets/worn green grass turf dotted with tiny wildflowers, sparse weeds, scattered metal bolts, su-c9e6e814.png" id="26_llm7k"]
+[ext_resource type="Texture2D" uid="uid://b4ky50117khd6" path="res://pixellab/source/tilesets/compacted earthy dirt with moderate surface grain and gentle tonal variation creating soft-d12d1228.png" id="27_m5qon"]
+[ext_resource type="Texture2D" uid="uid://dy01fuscgphsb" path="res://pixellab/source/tilesets/shimmering wavy water surface with moderate ripples and soft deep blue-green highlights and-2591ad5c.png" id="28_tx04l"]
+[ext_resource type="Script" uid="uid://b62sn671fmg6h" path="res://scripts/pixellab_map_builder.gd" id="Script_builder"]
+[ext_resource type="Texture2D" uid="uid://cmrou45yahjuw" path="res://pixellab/source/objects/e6adf19f-7da9-4126-91ac-b007652cd527.png" id="Texture_object_0_0"]
+[ext_resource type="Texture2D" uid="uid://d1bqd2u5uivl7" path="res://pixellab/source/objects/04389aa5-6b51-4a9b-8adb-7d23486ef20d.png" id="Texture_object_1_1"]
+[ext_resource type="Texture2D" uid="uid://bup8m64atkrec" path="res://pixellab/source/objects/23e0dbc8-566c-4296-9210-98db9d2cadd1.png" id="Texture_object_3_3"]
+[ext_resource type="Texture2D" uid="uid://bt1vdd6qihqx1" path="res://pixellab/source/objects/5ddb8d4b-6c02-4a18-9d00-3dd1788be006.png" id="Texture_object_4_4"]
+[ext_resource type="Texture2D" uid="uid://bf48rg87j2ygs" path="res://pixellab/source/objects/32ce29c4-485a-4caf-8327-8c7c71429137.png" id="Texture_object_5_5"]
+[ext_resource type="Texture2D" uid="uid://csjd276uqdqog" path="res://pixellab/source/objects/b7b65d37-1ced-4926-a2f3-3a6d295246d9.png" id="Texture_object_6_6"]
+[ext_resource type="Texture2D" uid="uid://defvdtgjrytpf" path="res://pixellab/source/objects/9de1e574-4616-49d8-ac54-db78c0a2f0c1.png" id="Texture_object_7_7"]
+[ext_resource type="Texture2D" uid="uid://dd7hdwxd1tm4p" path="res://pixellab/source/objects/928f69e4-31c7-4ac5-b0e3-1e68ef64da44.png" id="Texture_object_8_8"]
+[ext_resource type="Texture2D" uid="uid://vpddm1l7tun6" path="res://pixellab/source/objects/8879c22d-d243-4413-9e38-ac69049589b9.png" id="Texture_object_9_9"]
+[ext_resource type="Texture2D" uid="uid://dkw5x6jalrui7" path="res://pixellab/source/objects/0a99428b-0f3b-4837-a83f-50bc40b0e5f7.png" id="Texture_object_10_10"]
+[ext_resource type="Texture2D" uid="uid://cdrmorbvosnt1" path="res://pixellab/source/objects/6b20c175-5975-4bb3-8497-2fe4a6738f1f.png" id="Texture_object_11_11"]
+[ext_resource type="Texture2D" uid="uid://bsiulcefiu7x4" path="res://pixellab/source/objects/0d1b90ce-b7a7-4e89-858d-61a97e654837.png" id="Texture_object_12_12"]
+[ext_resource type="Texture2D" uid="uid://c7ivjebml0t7d" path="res://pixellab/source/objects/f82ec594-b763-4d73-a7e3-4fb2d610c599.png" id="Texture_object_13_13"]
+[ext_resource type="Texture2D" uid="uid://cpbk3x3yj442r" path="res://pixellab/source/objects/911ab8cc-e09d-4049-9d67-aab70f4a1364.png" id="Texture_object_14_14"]
+[ext_resource type="Texture2D" uid="uid://82kpecjbmxr8" path="res://pixellab/source/objects/a66c066f-220d-412c-a580-1fd61c8c1f1d.png" id="Texture_object_16_16"]
+[ext_resource type="Texture2D" uid="uid://bditljc5su6mc" path="res://pixellab/source/objects/a6b34564-9ea9-4f89-a12b-76f319248c3e.png" id="Texture_object_17_17"]
+[ext_resource type="Texture2D" uid="uid://chiqo1mrj7kip" path="res://pixellab/source/objects/d3d27046-d6bd-4990-a1c2-2b3bc7421a87.png" id="Texture_object_18_18"]
+[ext_resource type="Texture2D" uid="uid://o167nb5xvj05" path="res://pixellab/source/objects/c22f5d91-20cd-48a2-9d48-c4650ffa4716.png" id="Texture_object_19_19"]
+[ext_resource type="Texture2D" uid="uid://bnlatjqi1gydb" path="res://pixellab/source/objects/a67e2d80-bad2-4c05-87bf-a8066440baf3.png" id="Texture_object_20_20"]
+[ext_resource type="Texture2D" uid="uid://clefr2kgg4st2" path="res://pixellab/source/objects/79a3d23d-315a-47e0-905e-f53e1e289c5d.png" id="Texture_object_21_21"]
+[ext_resource type="Texture2D" uid="uid://c0gt1evhnorhn" path="res://pixellab/source/objects/75305e41-d97c-46a6-9c4e-424729cead25.png" id="Texture_object_22_22"]
+[ext_resource type="Texture2D" uid="uid://bvegmaj4tow24" path="res://pixellab/source/objects/25c4c644-a5a4-4b7f-9182-afa2db7fa0f4.png" id="Texture_object_23_23"]
+[ext_resource type="Texture2D" uid="uid://bvdd83sk6w3vj" path="res://pixellab/source/overlays/overlay-0.png" id="Texture_overlay_0_24"]
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_0"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_1"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_3"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_4"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_5"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_6"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_7"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_8"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_9"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_10"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_11"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_12"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_13"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_14"]
+size = Vector2(51.84, 44.44)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_16"]
+size = Vector2(17.28, 12)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_17"]
+size = Vector2(17.28, 12)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_18"]
+size = Vector2(17.28, 12)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_19"]
+size = Vector2(17.28, 12)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_20"]
+size = Vector2(17.28, 12)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_21"]
+size = Vector2(17.28, 12)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_22"]
+size = Vector2(17.28, 12)
+
+[sub_resource type="RectangleShape2D" id="ObjectShape_23"]
+size = Vector2(17.28, 12)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1o2ig"]
+texture = ExtResource("26_llm7k")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 1
+0:0/0/terrains_peering_bit/bottom_right_corner = 1
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/top_left_corner = 1
+0:0/0/terrains_peering_bit/top_right_corner = 1
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 1
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 1
+1:0/0/terrains_peering_bit/top_left_corner = 1
+1:0/0/terrains_peering_bit/top_right_corner = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/bottom_right_corner = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/top_left_corner = 0
+2:0/0/terrains_peering_bit/top_right_corner = 1
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 1
+3:0/0/terrains_peering_bit/bottom_right_corner = 0
+3:0/0/terrains_peering_bit/bottom_left_corner = 0
+3:0/0/terrains_peering_bit/top_left_corner = 1
+3:0/0/terrains_peering_bit/top_right_corner = 1
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_left_corner = 1
+0:1/0/terrains_peering_bit/top_left_corner = 0
+0:1/0/terrains_peering_bit/top_right_corner = 1
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 1
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/top_left_corner = 1
+1:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_right_corner = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+2:1/0/terrains_peering_bit/top_right_corner = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/bottom_right_corner = 1
+3:1/0/terrains_peering_bit/bottom_left_corner = 0
+3:1/0/terrains_peering_bit/top_left_corner = 0
+3:1/0/terrains_peering_bit/top_right_corner = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 1
+0:2/0/terrains_peering_bit/bottom_right_corner = 1
+0:2/0/terrains_peering_bit/bottom_left_corner = 1
+0:2/0/terrains_peering_bit/top_left_corner = 1
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/terrains_peering_bit/bottom_right_corner = 1
+1:2/0/terrains_peering_bit/bottom_left_corner = 1
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/terrains_peering_bit/bottom_right_corner = 0
+2:2/0/terrains_peering_bit/bottom_left_corner = 1
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_right_corner = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/terrains_peering_bit/bottom_right_corner = 1
+3:2/0/terrains_peering_bit/bottom_left_corner = 0
+3:2/0/terrains_peering_bit/top_left_corner = 0
+3:2/0/terrains_peering_bit/top_right_corner = 1
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 1
+0:3/0/terrains_peering_bit/bottom_right_corner = 1
+0:3/0/terrains_peering_bit/bottom_left_corner = 1
+0:3/0/terrains_peering_bit/top_left_corner = 1
+0:3/0/terrains_peering_bit/top_right_corner = 1
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 1
+1:3/0/terrains_peering_bit/bottom_right_corner = 0
+1:3/0/terrains_peering_bit/bottom_left_corner = 1
+1:3/0/terrains_peering_bit/top_left_corner = 1
+1:3/0/terrains_peering_bit/top_right_corner = 1
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 1
+2:3/0/terrains_peering_bit/bottom_right_corner = 1
+2:3/0/terrains_peering_bit/bottom_left_corner = 0
+2:3/0/terrains_peering_bit/top_left_corner = 1
+2:3/0/terrains_peering_bit/top_right_corner = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+3:3/0/terrains_peering_bit/bottom_right_corner = 1
+3:3/0/terrains_peering_bit/bottom_left_corner = 1
+3:3/0/terrains_peering_bit/top_left_corner = 0
+3:3/0/terrains_peering_bit/top_right_corner = 1
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3d2fx"]
+texture = ExtResource("27_m5qon")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 2
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 2
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/top_left_corner = 0
+1:0/0/terrains_peering_bit/top_right_corner = 2
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 2
+2:0/0/terrains_peering_bit/bottom_right_corner = 2
+2:0/0/terrains_peering_bit/bottom_left_corner = 2
+2:0/0/terrains_peering_bit/top_left_corner = 2
+2:0/0/terrains_peering_bit/top_right_corner = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/bottom_right_corner = 2
+3:0/0/terrains_peering_bit/bottom_left_corner = 2
+3:0/0/terrains_peering_bit/top_left_corner = 0
+3:0/0/terrains_peering_bit/top_right_corner = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 2
+0:1/0/terrains_peering_bit/bottom_right_corner = 2
+0:1/0/terrains_peering_bit/bottom_left_corner = 0
+0:1/0/terrains_peering_bit/top_left_corner = 2
+0:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 2
+1:1/0/terrains_peering_bit/bottom_left_corner = 2
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_right_corner = 2
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 2
+2:1/0/terrains_peering_bit/bottom_right_corner = 2
+2:1/0/terrains_peering_bit/bottom_left_corner = 2
+2:1/0/terrains_peering_bit/top_left_corner = 2
+2:1/0/terrains_peering_bit/top_right_corner = 2
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 2
+3:1/0/terrains_peering_bit/bottom_right_corner = 0
+3:1/0/terrains_peering_bit/bottom_left_corner = 2
+3:1/0/terrains_peering_bit/top_left_corner = 2
+3:1/0/terrains_peering_bit/top_right_corner = 2
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/terrains_peering_bit/bottom_right_corner = 0
+0:2/0/terrains_peering_bit/bottom_left_corner = 0
+0:2/0/terrains_peering_bit/top_left_corner = 0
+0:2/0/terrains_peering_bit/top_right_corner = 2
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 2
+1:2/0/terrains_peering_bit/bottom_right_corner = 0
+1:2/0/terrains_peering_bit/bottom_left_corner = 0
+1:2/0/terrains_peering_bit/top_left_corner = 2
+1:2/0/terrains_peering_bit/top_right_corner = 2
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 2
+2:2/0/terrains_peering_bit/bottom_right_corner = 2
+2:2/0/terrains_peering_bit/bottom_left_corner = 0
+2:2/0/terrains_peering_bit/top_left_corner = 2
+2:2/0/terrains_peering_bit/top_right_corner = 2
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 2
+3:2/0/terrains_peering_bit/bottom_right_corner = 0
+3:2/0/terrains_peering_bit/bottom_left_corner = 2
+3:2/0/terrains_peering_bit/top_left_corner = 2
+3:2/0/terrains_peering_bit/top_right_corner = 0
+0:3/0 = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/terrains_peering_bit/bottom_right_corner = 2
+1:3/0/terrains_peering_bit/bottom_left_corner = 0
+1:3/0/terrains_peering_bit/top_left_corner = 0
+1:3/0/terrains_peering_bit/top_right_corner = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/terrains_peering_bit/bottom_right_corner = 0
+2:3/0/terrains_peering_bit/bottom_left_corner = 2
+2:3/0/terrains_peering_bit/top_left_corner = 0
+2:3/0/terrains_peering_bit/top_right_corner = 2
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 2
+3:3/0/terrains_peering_bit/bottom_right_corner = 0
+3:3/0/terrains_peering_bit/bottom_left_corner = 0
+3:3/0/terrains_peering_bit/top_left_corner = 2
+3:3/0/terrains_peering_bit/top_right_corner = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_385ei"]
+texture = ExtResource("28_tx04l")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 3
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 3
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/top_left_corner = 0
+1:0/0/terrains_peering_bit/top_right_corner = 3
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 3
+2:0/0/terrains_peering_bit/bottom_right_corner = 3
+2:0/0/terrains_peering_bit/bottom_left_corner = 3
+2:0/0/terrains_peering_bit/top_left_corner = 3
+2:0/0/terrains_peering_bit/top_right_corner = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/bottom_right_corner = 3
+3:0/0/terrains_peering_bit/bottom_left_corner = 3
+3:0/0/terrains_peering_bit/top_left_corner = 0
+3:0/0/terrains_peering_bit/top_right_corner = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 3
+0:1/0/terrains_peering_bit/bottom_right_corner = 3
+0:1/0/terrains_peering_bit/bottom_left_corner = 0
+0:1/0/terrains_peering_bit/top_left_corner = 3
+0:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 3
+1:1/0/terrains_peering_bit/bottom_left_corner = 3
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_right_corner = 3
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 3
+2:1/0/terrains_peering_bit/bottom_right_corner = 3
+2:1/0/terrains_peering_bit/bottom_left_corner = 3
+2:1/0/terrains_peering_bit/top_left_corner = 3
+2:1/0/terrains_peering_bit/top_right_corner = 3
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 3
+3:1/0/terrains_peering_bit/bottom_right_corner = 0
+3:1/0/terrains_peering_bit/bottom_left_corner = 3
+3:1/0/terrains_peering_bit/top_left_corner = 3
+3:1/0/terrains_peering_bit/top_right_corner = 3
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/terrains_peering_bit/bottom_right_corner = 0
+0:2/0/terrains_peering_bit/bottom_left_corner = 0
+0:2/0/terrains_peering_bit/top_left_corner = 0
+0:2/0/terrains_peering_bit/top_right_corner = 3
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 3
+1:2/0/terrains_peering_bit/bottom_right_corner = 0
+1:2/0/terrains_peering_bit/bottom_left_corner = 0
+1:2/0/terrains_peering_bit/top_left_corner = 3
+1:2/0/terrains_peering_bit/top_right_corner = 3
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 3
+2:2/0/terrains_peering_bit/bottom_right_corner = 3
+2:2/0/terrains_peering_bit/bottom_left_corner = 0
+2:2/0/terrains_peering_bit/top_left_corner = 3
+2:2/0/terrains_peering_bit/top_right_corner = 3
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 3
+3:2/0/terrains_peering_bit/bottom_right_corner = 0
+3:2/0/terrains_peering_bit/bottom_left_corner = 3
+3:2/0/terrains_peering_bit/top_left_corner = 3
+3:2/0/terrains_peering_bit/top_right_corner = 0
+0:3/0 = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/terrains_peering_bit/bottom_right_corner = 3
+1:3/0/terrains_peering_bit/bottom_left_corner = 0
+1:3/0/terrains_peering_bit/top_left_corner = 0
+1:3/0/terrains_peering_bit/top_right_corner = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/terrains_peering_bit/bottom_right_corner = 0
+2:3/0/terrains_peering_bit/bottom_left_corner = 3
+2:3/0/terrains_peering_bit/top_left_corner = 0
+2:3/0/terrains_peering_bit/top_right_corner = 3
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 3
+3:3/0/terrains_peering_bit/bottom_right_corner = 0
+3:3/0/terrains_peering_bit/bottom_left_corner = 0
+3:3/0/terrains_peering_bit/top_left_corner = 3
+3:3/0/terrains_peering_bit/top_right_corner = 0
+
+[sub_resource type="TileSet" id="TileSet_0os8d"]
+tile_size = Vector2i(32, 32)
+terrain_set_0/mode = 1
+terrain_set_0/terrain_0/name = "worn green grass turf dotted with tiny wildflowers, sparse weeds, scattered metal bolts, subtle rust stains, and occasional mechanical debris featuring soft gentle lighting and moderate surface texture"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+terrain_set_0/terrain_1/name = "weathered scrap-strewn earth featuring overlapping flat metal plates, cable fragments, exposed screws, rusted parts, interspersed dirt patches, and grass tufts growing through cracks under soft diffused illumination"
+terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
+terrain_set_0/terrain_2/name = "compacted earthy dirt with moderate surface grain and gentle tonal variation creating soft depth"
+terrain_set_0/terrain_2/color = Color(0.46875, 0.5, 0.25, 1)
+terrain_set_0/terrain_3/name = "shimmering wavy water surface with moderate ripples and soft deep blue-green highlights and shadows"
+terrain_set_0/terrain_3/color = Color(0.375, 0.5, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_1o2ig")
+sources/1 = SubResource("TileSetAtlasSource_3d2fx")
+sources/2 = SubResource("TileSetAtlasSource_385ei")
+
+[node name="Untitled Map" type="Node2D" unique_id=516475043]
+y_sort_enabled = true
+script = ExtResource("Script_builder")
+metadata/pixellab_format = "pixellab-engine-map"
+metadata/pixellab_version = "2.1.0"
+
+[node name="Inpaint Overlays" type="Node2D" parent="." unique_id=1593042001]
+
+[node name="Inpaint Overlay 1" type="Sprite2D" parent="Inpaint Overlays" unique_id=696999016]
+z_index = 1
+position = Vector2(192, 80)
+texture = ExtResource("Texture_overlay_0_24")
+centered = false
+metadata/pixellab_id = "0"
+metadata/pixellab_type = "inpainting"
+metadata/pixellab_source = "{\"id\":0,\"filename\":\"overlay-0.png\",\"type\":\"inpainting\",\"dimensions\":{\"width\":736,\"height\":608},\"worldCoordinates\":{\"x\":160,\"y\":32},\"layer\":\"custom\"}"
+
+[node name="Objects" type="Node2D" parent="." unique_id=875313697]
+y_sort_enabled = true
+
+[node name="Object 0 1" type="StaticBody2D" parent="Objects" unique_id=1471780231]
+z_index = 1
+position = Vector2(31, 298)
+metadata/pixellab_id = "e6adf19f-7da9-4126-91ac-b007652cd527"
+metadata/pixellab_source = "{\"id\":\"e6adf19f-7da9-4126-91ac-b007652cd527\",\"name\":\"Object 0\",\"filename\":\"e6adf19f-7da9-4126-91ac-b007652cd527.png\",\"boundingBox\":{\"x\":-1,\"y\":266,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":22.0,\"y\":342.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-24T15:55:09.750Z\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 1" unique_id=1749162114]
+texture = ExtResource("Texture_object_0_0")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 1" unique_id=1706495201]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_0")
+
+[node name="Object 0 2" type="StaticBody2D" parent="Objects" unique_id=1670122079]
+z_index = 1
+position = Vector2(290, 220)
+metadata/pixellab_id = "e6adf19f-7da9-4126-91ac-b007652cd527"
+metadata/pixellab_source = "{\"id\":\"e6adf19f-7da9-4126-91ac-b007652cd527\",\"name\":\"Object 0\",\"filename\":\"e6adf19f-7da9-4126-91ac-b007652cd527.png\",\"boundingBox\":{\"x\":-1,\"y\":266,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":22.0,\"y\":342.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-24T15:55:09.750Z\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 2" unique_id=822593104]
+texture = ExtResource("Texture_object_0_0")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 2" unique_id=59600564]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_0")
+
+[node name="Object 0 (Copy) 2" type="StaticBody2D" parent="Objects" unique_id=424516058]
+z_index = 1
+position = Vector2(146, 449)
+metadata/pixellab_id = "04389aa5-6b51-4a9b-8adb-7d23486ef20d"
+metadata/pixellab_source = "{\"id\":\"04389aa5-6b51-4a9b-8adb-7d23486ef20d\",\"name\":\"Object 0 (Copy)\",\"filename\":\"04389aa5-6b51-4a9b-8adb-7d23486ef20d.png\",\"boundingBox\":{\"x\":114,\"y\":417,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":137.0,\"y\":493.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-24T15:59:31.881Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy) 2" unique_id=1361006472]
+texture = ExtResource("Texture_object_1_1")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy) 2" unique_id=1842293065]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_1")
+
+[node name="Object 0 (Copy 3) 4" type="StaticBody2D" parent="Objects" unique_id=1410562462]
+z_index = 1
+position = Vector2(382, -14)
+metadata/pixellab_id = "23e0dbc8-566c-4296-9210-98db9d2cadd1"
+metadata/pixellab_source = "{\"id\":\"23e0dbc8-566c-4296-9210-98db9d2cadd1\",\"name\":\"Object 0 (Copy 3)\",\"filename\":\"23e0dbc8-566c-4296-9210-98db9d2cadd1.png\",\"boundingBox\":{\"x\":350,\"y\":-46,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":373.0,\"y\":30.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-24T15:59:40.452Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 3) 4" unique_id=1795538061]
+texture = ExtResource("Texture_object_3_3")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 3) 4" unique_id=1423968357]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_3")
+
+[node name="Object 0 (Copy 4) 5" type="StaticBody2D" parent="Objects" unique_id=1077426812]
+z_index = 1
+position = Vector2(213, 11)
+metadata/pixellab_id = "5ddb8d4b-6c02-4a18-9d00-3dd1788be006"
+metadata/pixellab_source = "{\"id\":\"5ddb8d4b-6c02-4a18-9d00-3dd1788be006\",\"name\":\"Object 0 (Copy 4)\",\"filename\":\"5ddb8d4b-6c02-4a18-9d00-3dd1788be006.png\",\"boundingBox\":{\"x\":181,\"y\":-21,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":204.0,\"y\":55.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-24T15:59:45.872Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 4) 5" unique_id=1379365114]
+texture = ExtResource("Texture_object_4_4")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 4) 5" unique_id=1932409320]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_4")
+
+[node name="Object 0 (Copy 5) 6" type="StaticBody2D" parent="Objects" unique_id=1453701113]
+position = Vector2(120, 335)
+metadata/pixellab_id = "32ce29c4-485a-4caf-8327-8c7c71429137"
+metadata/pixellab_source = "{\"id\":\"32ce29c4-485a-4caf-8327-8c7c71429137\",\"name\":\"Object 0 (Copy 5)\",\"filename\":\"32ce29c4-485a-4caf-8327-8c7c71429137.png\",\"boundingBox\":{\"x\":88,\"y\":225,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":111.0,\"y\":301.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-24T15:59:50.223Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 5) 6" unique_id=1032407967]
+position = Vector2(0, -78)
+rotation = 0.01805411
+texture = ExtResource("Texture_object_5_5")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 5) 6" unique_id=335603234]
+position = Vector2(40.5, 0)
+shape = SubResource("ObjectShape_5")
+
+[node name="Object 0 (Copy 6) 7" type="StaticBody2D" parent="Objects" unique_id=832555084]
+z_index = 1
+position = Vector2(442, 558)
+metadata/pixellab_id = "b7b65d37-1ced-4926-a2f3-3a6d295246d9"
+metadata/pixellab_source = "{\"id\":\"b7b65d37-1ced-4926-a2f3-3a6d295246d9\",\"name\":\"Object 0 (Copy 6)\",\"filename\":\"b7b65d37-1ced-4926-a2f3-3a6d295246d9.png\",\"boundingBox\":{\"x\":410,\"y\":526,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":433.0,\"y\":602.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-24T15:59:55.022Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 6) 7" unique_id=737228128]
+texture = ExtResource("Texture_object_6_6")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 6) 7" unique_id=1383639467]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_6")
+
+[node name="Object 0 (Copy 7) 8" type="StaticBody2D" parent="Objects" unique_id=1782552734]
+z_index = 1
+position = Vector2(480, 118)
+metadata/pixellab_id = "9de1e574-4616-49d8-ac54-db78c0a2f0c1"
+metadata/pixellab_source = "{\"id\":\"9de1e574-4616-49d8-ac54-db78c0a2f0c1\",\"name\":\"Object 0 (Copy 7)\",\"filename\":\"9de1e574-4616-49d8-ac54-db78c0a2f0c1.png\",\"boundingBox\":{\"x\":448,\"y\":86,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":471.0,\"y\":162.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-24T15:59:58.663Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 7) 8" unique_id=1102676588]
+texture = ExtResource("Texture_object_7_7")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 7) 8" unique_id=407870961]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_7")
+
+[node name="Object 0 (Copy 8) 9" type="StaticBody2D" parent="Objects" unique_id=1696268438]
+z_index = 1
+position = Vector2(720, 43)
+metadata/pixellab_id = "928f69e4-31c7-4ac5-b0e3-1e68ef64da44"
+metadata/pixellab_source = "{\"id\":\"928f69e4-31c7-4ac5-b0e3-1e68ef64da44\",\"name\":\"Object 0 (Copy 8)\",\"filename\":\"928f69e4-31c7-4ac5-b0e3-1e68ef64da44.png\",\"boundingBox\":{\"x\":688,\"y\":11,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":711.0,\"y\":87.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-24T16:02:29.408Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 8) 9" unique_id=295718365]
+texture = ExtResource("Texture_object_8_8")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 8) 9" unique_id=1211760183]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_8")
+
+[node name="Object 0 (Copy 9) 10" type="StaticBody2D" parent="Objects" unique_id=681439054]
+z_index = 1
+position = Vector2(706, 214)
+metadata/pixellab_id = "8879c22d-d243-4413-9e38-ac69049589b9"
+metadata/pixellab_source = "{\"id\":\"8879c22d-d243-4413-9e38-ac69049589b9\",\"name\":\"Object 0 (Copy 9)\",\"filename\":\"8879c22d-d243-4413-9e38-ac69049589b9.png\",\"boundingBox\":{\"x\":674,\"y\":182,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":697.0,\"y\":258.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-25T15:45:08.062Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 9) 10" unique_id=96506552]
+texture = ExtResource("Texture_object_9_9")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 9) 10" unique_id=1499795355]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_9")
+
+[node name="Object 0 (Copy 10) 11" type="StaticBody2D" parent="Objects" unique_id=2143077549]
+z_index = 1
+position = Vector2(647, 357)
+metadata/pixellab_id = "0a99428b-0f3b-4837-a83f-50bc40b0e5f7"
+metadata/pixellab_source = "{\"id\":\"0a99428b-0f3b-4837-a83f-50bc40b0e5f7\",\"name\":\"Object 0 (Copy 10)\",\"filename\":\"0a99428b-0f3b-4837-a83f-50bc40b0e5f7.png\",\"boundingBox\":{\"x\":615,\"y\":325,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":638.0,\"y\":401.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-25T15:45:24.764Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 10) 11" unique_id=1193238545]
+texture = ExtResource("Texture_object_10_10")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 10) 11" unique_id=864377796]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_10")
+
+[node name="Object 0 (Copy 11) 12" type="StaticBody2D" parent="Objects" unique_id=856088662]
+z_index = 1
+position = Vector2(859, 112)
+metadata/pixellab_id = "6b20c175-5975-4bb3-8497-2fe4a6738f1f"
+metadata/pixellab_source = "{\"id\":\"6b20c175-5975-4bb3-8497-2fe4a6738f1f\",\"name\":\"Object 0 (Copy 11)\",\"filename\":\"6b20c175-5975-4bb3-8497-2fe4a6738f1f.png\",\"boundingBox\":{\"x\":827,\"y\":80,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":850.0,\"y\":156.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-25T15:45:34.145Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 11) 12" unique_id=419352082]
+texture = ExtResource("Texture_object_11_11")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 11) 12" unique_id=1842573398]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_11")
+
+[node name="Object 0 (Copy 12) 13" type="StaticBody2D" parent="Objects" unique_id=2029107833]
+z_index = 1
+position = Vector2(1075, 73)
+metadata/pixellab_id = "0d1b90ce-b7a7-4e89-858d-61a97e654837"
+metadata/pixellab_source = "{\"id\":\"0d1b90ce-b7a7-4e89-858d-61a97e654837\",\"name\":\"Object 0 (Copy 12)\",\"filename\":\"0d1b90ce-b7a7-4e89-858d-61a97e654837.png\",\"boundingBox\":{\"x\":1043,\"y\":41,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":1066.0,\"y\":117.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-25T15:45:35.778Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 12) 13" unique_id=94185229]
+texture = ExtResource("Texture_object_12_12")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 12) 13" unique_id=108691005]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_12")
+
+[node name="Object 0 (Copy 13) 14" type="StaticBody2D" parent="Objects" unique_id=1295921260]
+z_index = 1
+position = Vector2(726, 501)
+metadata/pixellab_id = "f82ec594-b763-4d73-a7e3-4fb2d610c599"
+metadata/pixellab_source = "{\"id\":\"f82ec594-b763-4d73-a7e3-4fb2d610c599\",\"name\":\"Object 0 (Copy 13)\",\"filename\":\"f82ec594-b763-4d73-a7e3-4fb2d610c599.png\",\"boundingBox\":{\"x\":694,\"y\":469,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":717.0,\"y\":545.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-25T15:45:36.795Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 13) 14" unique_id=1096635638]
+texture = ExtResource("Texture_object_13_13")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 13) 14" unique_id=162420092]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_13")
+
+[node name="Object 0 (Copy 14) 15" type="StaticBody2D" parent="Objects" unique_id=1746773123]
+z_index = 1
+position = Vector2(865, 340)
+metadata/pixellab_id = "911ab8cc-e09d-4049-9d67-aab70f4a1364"
+metadata/pixellab_source = "{\"id\":\"911ab8cc-e09d-4049-9d67-aab70f4a1364\",\"name\":\"Object 0 (Copy 14)\",\"filename\":\"911ab8cc-e09d-4049-9d67-aab70f4a1364.png\",\"boundingBox\":{\"x\":833,\"y\":308,\"width\":81,\"height\":101},\"groundBounds\":{\"x\":856.0,\"y\":384.0,\"width\":35.0,\"height\":25.0},\"layer\":1,\"visible\":true,\"locked\":false,\"description\":\"simple top-down 2D pixel art of a blooming tree in a post-apocalyptic wasteland\",\"metadata\":{\"lastEdited\":\"2026-09-24T15:55:10.478707\",\"generatedAt\":\"2026-09-25T15:45:37.478Z\",\"duplicatedFromObjectId\":\"e6adf19f-7da9-4126-91ac-b007652cd527\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 14) 15" unique_id=65473889]
+texture = ExtResource("Texture_object_14_14")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 14) 15" unique_id=1641044302]
+position = Vector2(40.5, 78.78)
+shape = SubResource("ObjectShape_14")
+
+[node name="Object 0 17" type="StaticBody2D" parent="Objects" unique_id=1753182849]
+z_index = 17
+position = Vector2(400, 261)
+metadata/pixellab_id = "a66c066f-220d-412c-a580-1fd61c8c1f1d"
+metadata/pixellab_source = "{\"id\":\"a66c066f-220d-412c-a580-1fd61c8c1f1d\",\"name\":\"Object 0\",\"filename\":\"a66c066f-220d-412c-a580-1fd61c8c1f1d.png\",\"boundingBox\":{\"x\":367.5,\"y\":229,\"width\":27,\"height\":21},\"groundBounds\":{\"x\":371.5,\"y\":245.0,\"width\":20.0,\"height\":5.0},\"layer\":17,\"visible\":true,\"locked\":false,\"description\":\"a pile of post apocalyptic metal scraps\",\"metadata\":{\"generatedAt\":\"2026-09-25T16:05:51.615Z\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 17" unique_id=1379343932]
+texture = ExtResource("Texture_object_16_16")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 17" unique_id=1908434318]
+position = Vector2(13, 15)
+shape = SubResource("ObjectShape_16")
+
+[node name="Object 0 (Copy 15) 18" type="StaticBody2D" parent="Objects" unique_id=1642264606]
+z_index = 17
+position = Vector2(612, 455)
+metadata/pixellab_id = "a6b34564-9ea9-4f89-a12b-76f319248c3e"
+metadata/pixellab_source = "{\"id\":\"a6b34564-9ea9-4f89-a12b-76f319248c3e\",\"name\":\"Object 0 (Copy 15)\",\"filename\":\"a6b34564-9ea9-4f89-a12b-76f319248c3e.png\",\"boundingBox\":{\"x\":580,\"y\":423,\"width\":27,\"height\":21},\"groundBounds\":{\"x\":584.0,\"y\":439.0,\"width\":20.0,\"height\":5.0},\"layer\":17,\"visible\":true,\"locked\":false,\"description\":\"a pile of post apocalyptic metal scraps\",\"metadata\":{\"generatedAt\":\"2026-09-25T16:06:15.616Z\",\"duplicatedFromObjectId\":\"a66c066f-220d-412c-a580-1fd61c8c1f1d\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 15) 18" unique_id=275209029]
+texture = ExtResource("Texture_object_17_17")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 15) 18" unique_id=182586148]
+position = Vector2(13.5, 15)
+shape = SubResource("ObjectShape_17")
+
+[node name="Object 0 (Copy 16) 19" type="StaticBody2D" parent="Objects" unique_id=1696588705]
+z_index = 17
+position = Vector2(678, 202)
+metadata/pixellab_id = "d3d27046-d6bd-4990-a1c2-2b3bc7421a87"
+metadata/pixellab_source = "{\"id\":\"d3d27046-d6bd-4990-a1c2-2b3bc7421a87\",\"name\":\"Object 0 (Copy 16)\",\"filename\":\"d3d27046-d6bd-4990-a1c2-2b3bc7421a87.png\",\"boundingBox\":{\"x\":645.5,\"y\":169.5,\"width\":27,\"height\":21},\"groundBounds\":{\"x\":649.5,\"y\":185.5,\"width\":20.0,\"height\":5.0},\"layer\":17,\"visible\":true,\"locked\":false,\"description\":\"a pile of post apocalyptic metal scraps\",\"metadata\":{\"generatedAt\":\"2026-09-25T16:06:20.002Z\",\"duplicatedFromObjectId\":\"a66c066f-220d-412c-a580-1fd61c8c1f1d\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 16) 19" unique_id=1578496848]
+texture = ExtResource("Texture_object_18_18")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 16) 19" unique_id=1459853762]
+position = Vector2(13, 14.5)
+shape = SubResource("ObjectShape_18")
+
+[node name="Object 0 (Copy 17) 20" type="StaticBody2D" parent="Objects" unique_id=1313130577]
+z_index = 17
+position = Vector2(583, 578)
+metadata/pixellab_id = "c22f5d91-20cd-48a2-9d48-c4650ffa4716"
+metadata/pixellab_source = "{\"id\":\"c22f5d91-20cd-48a2-9d48-c4650ffa4716\",\"name\":\"Object 0 (Copy 17)\",\"filename\":\"c22f5d91-20cd-48a2-9d48-c4650ffa4716.png\",\"boundingBox\":{\"x\":550.5,\"y\":545.5,\"width\":27,\"height\":21},\"groundBounds\":{\"x\":554.5,\"y\":561.5,\"width\":20.0,\"height\":5.0},\"layer\":17,\"visible\":true,\"locked\":false,\"description\":\"a pile of post apocalyptic metal scraps\",\"metadata\":{\"generatedAt\":\"2026-09-25T16:06:20.431Z\",\"duplicatedFromObjectId\":\"a66c066f-220d-412c-a580-1fd61c8c1f1d\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 17) 20" unique_id=266694784]
+texture = ExtResource("Texture_object_19_19")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 17) 20" unique_id=259760246]
+position = Vector2(13, 14.5)
+shape = SubResource("ObjectShape_19")
+
+[node name="Object 0 (Copy 18) 21" type="StaticBody2D" parent="Objects" unique_id=492883200]
+z_index = 17
+position = Vector2(682, 64)
+metadata/pixellab_id = "a67e2d80-bad2-4c05-87bf-a8066440baf3"
+metadata/pixellab_source = "{\"id\":\"a67e2d80-bad2-4c05-87bf-a8066440baf3\",\"name\":\"Object 0 (Copy 18)\",\"filename\":\"a67e2d80-bad2-4c05-87bf-a8066440baf3.png\",\"boundingBox\":{\"x\":649.5,\"y\":31.5,\"width\":27,\"height\":21},\"groundBounds\":{\"x\":653.5,\"y\":47.5,\"width\":20.0,\"height\":5.0},\"layer\":17,\"visible\":true,\"locked\":false,\"description\":\"a pile of post apocalyptic metal scraps\",\"metadata\":{\"generatedAt\":\"2026-09-25T16:06:20.602Z\",\"duplicatedFromObjectId\":\"a66c066f-220d-412c-a580-1fd61c8c1f1d\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 18) 21" unique_id=444610392]
+texture = ExtResource("Texture_object_20_20")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 18) 21" unique_id=345340416]
+position = Vector2(13, 14.5)
+shape = SubResource("ObjectShape_20")
+
+[node name="Object 0 (Copy 19) 22" type="StaticBody2D" parent="Objects" unique_id=188798454]
+z_index = 17
+position = Vector2(864, 274)
+metadata/pixellab_id = "79a3d23d-315a-47e0-905e-f53e1e289c5d"
+metadata/pixellab_source = "{\"id\":\"79a3d23d-315a-47e0-905e-f53e1e289c5d\",\"name\":\"Object 0 (Copy 19)\",\"filename\":\"79a3d23d-315a-47e0-905e-f53e1e289c5d.png\",\"boundingBox\":{\"x\":831.5,\"y\":241.5,\"width\":27,\"height\":21},\"groundBounds\":{\"x\":835.5,\"y\":257.5,\"width\":20.0,\"height\":5.0},\"layer\":17,\"visible\":true,\"locked\":false,\"description\":\"a pile of post apocalyptic metal scraps\",\"metadata\":{\"generatedAt\":\"2026-09-25T16:06:20.764Z\",\"duplicatedFromObjectId\":\"a66c066f-220d-412c-a580-1fd61c8c1f1d\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 19) 22" unique_id=959180485]
+texture = ExtResource("Texture_object_21_21")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 19) 22" unique_id=12182942]
+position = Vector2(13, 14.5)
+shape = SubResource("ObjectShape_21")
+
+[node name="Object 0 (Copy 20) 23" type="StaticBody2D" parent="Objects" unique_id=2075507706]
+z_index = 17
+position = Vector2(871, 603)
+metadata/pixellab_id = "75305e41-d97c-46a6-9c4e-424729cead25"
+metadata/pixellab_source = "{\"id\":\"75305e41-d97c-46a6-9c4e-424729cead25\",\"name\":\"Object 0 (Copy 20)\",\"filename\":\"75305e41-d97c-46a6-9c4e-424729cead25.png\",\"boundingBox\":{\"x\":838.5,\"y\":570.5,\"width\":27,\"height\":21},\"groundBounds\":{\"x\":842.5,\"y\":586.5,\"width\":20.0,\"height\":5.0},\"layer\":17,\"visible\":true,\"locked\":false,\"description\":\"a pile of post apocalyptic metal scraps\",\"metadata\":{\"generatedAt\":\"2026-09-25T16:06:20.917Z\",\"duplicatedFromObjectId\":\"a66c066f-220d-412c-a580-1fd61c8c1f1d\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 20) 23" unique_id=992033533]
+texture = ExtResource("Texture_object_22_22")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 20) 23" unique_id=1129621628]
+position = Vector2(13, 14.5)
+shape = SubResource("ObjectShape_22")
+
+[node name="Object 0 (Copy 21) 24" type="StaticBody2D" parent="Objects" unique_id=1233132866]
+z_index = 17
+position = Vector2(297, 581)
+metadata/pixellab_id = "25c4c644-a5a4-4b7f-9182-afa2db7fa0f4"
+metadata/pixellab_source = "{\"id\":\"25c4c644-a5a4-4b7f-9182-afa2db7fa0f4\",\"name\":\"Object 0 (Copy 21)\",\"filename\":\"25c4c644-a5a4-4b7f-9182-afa2db7fa0f4.png\",\"boundingBox\":{\"x\":264.5,\"y\":548.5,\"width\":27,\"height\":21},\"groundBounds\":{\"x\":268.5,\"y\":564.5,\"width\":20.0,\"height\":5.0},\"layer\":17,\"visible\":true,\"locked\":false,\"description\":\"a pile of post apocalyptic metal scraps\",\"metadata\":{\"generatedAt\":\"2026-09-25T16:06:23.311Z\",\"duplicatedFromObjectId\":\"a66c066f-220d-412c-a580-1fd61c8c1f1d\"},\"isProgress\":false}"
+
+[node name="Visual" type="Sprite2D" parent="Objects/Object 0 (Copy 21) 24" unique_id=1966902356]
+texture = ExtResource("Texture_object_23_23")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Object 0 (Copy 21) 24" unique_id=267293620]
+position = Vector2(13, 14.5)
+shape = SubResource("ObjectShape_23")
+
+[node name="Gameplay" type="Node2D" parent="." unique_id=323075276]
+position = Vector2(16, 16)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1585120369]
+position = Vector2(656, 352)
+
+[node name="Tile Layers" type="Node2D" parent="." unique_id=2002963129]
+z_index = -1
+
+[node name="Y0 - GROUND - Terrain" type="TileMapLayer" parent="Tile Layers" unique_id=1590099419]
+editor_description = "PixelLab ground terrain. All terrain pairs share this native layer so Godot can autotile across them."
+tile_map_data = PackedByteArray("AAABAAEAAAACAAEAAAACAAEAAAACAAEAAAADAAEAAAACAAEAAAAEAAEAAAACAAEAAAAFAAEAAAACAAEAAAAGAAEAAAACAAEAAAAHAAEAAAACAAEAAAAIAAEAAAACAAEAAAAJAAEAAAACAAEAAAAKAAEAAAACAAEAAAALAAEAAAACAAEAAAAMAAEAAAACAAEAAAANAAEAAAACAAEAAAAOAAEAAAACAAEAAAASAAEAAAACAAEAAAATAAEAAAACAAEAAAAUAAEAAAACAAEAAAAVAAEAAAACAAEAAAAWAAEAAAACAAEAAAAXAAEAAAACAAEAAAAYAAEAAAACAAEAAAAZAAEAAAACAAEAAAAaAAEAAAACAAEAAAAbAAEAAAACAAEAAAAcAAEAAAACAAEAAAAdAAEAAAACAAEAAAAeAAEAAAACAAEAAAAfAAEAAAACAAEAAAAgAAEAAAACAAEAAAAhAAEAAAACAAEAAAAiAAEAAAACAAEAAAAjAAEAAAACAAEAAAAkAAEAAAACAAEAAAAlAAEAAAACAAEAAAAmAAEAAAACAAEAAAAnAAEAAAACAAEAAAAoAAEAAAACAAEAAAABAAIAAAACAAEAAAACAAIAAAADAAEAAAADAAIAAAABAAIAAAAEAAIAAAABAAIAAAAFAAIAAAABAAIAAAAGAAIAAAABAAIAAAAHAAIAAAACAAIAAAAIAAIAAAACAAEAAAAJAAIAAAACAAEAAAAKAAIAAAACAAEAAAALAAIAAAACAAEAAAAMAAIAAAACAAEAAAANAAIAAAACAAEAAAAOAAIAAAACAAEAAAASAAIAAAACAAEAAAATAAIAAAACAAEAAAAUAAIAAAACAAEAAAAVAAIAAAACAAEAAAAWAAIAAAACAAEAAAAXAAIAAAACAAEAAAAYAAIAAAACAAEAAAAZAAIAAAACAAEAAAAaAAIAAAACAAEAAAAbAAIAAAACAAEAAAAcAAIAAAACAAEAAAAdAAIAAAACAAEAAAAeAAIAAAACAAEAAAAfAAIAAAACAAEAAAAgAAIAAAACAAEAAAAhAAIAAAACAAEAAAAiAAIAAAACAAEAAAAjAAIAAAACAAEAAAAkAAIAAAACAAEAAAAlAAIAAAACAAEAAAAmAAIAAAACAAEAAAAnAAIAAAACAAEAAAAoAAIAAAACAAEAAAABAAMAAAACAAEAAAACAAMAAAADAAIAAAADAAMAAAAAAAMAAAAEAAMAAAAAAAMAAAAFAAMAAAAAAAMAAAAGAAMAAAAAAAMAAAAHAAMAAAABAAAAAAAIAAMAAAACAAEAAAAJAAMAAAACAAEAAAAKAAMAAAACAAEAAAALAAMAAAACAAEAAAAMAAMAAAACAAEAAAANAAMAAAACAAEAAAAOAAMAAAACAAEAAAASAAMAAAACAAEAAAATAAMAAAACAAEAAAAUAAMAAAACAAEAAAAVAAMAAAACAAEAAAAWAAMAAAACAAEAAAAXAAMAAAACAAEAAAAYAAMAAAACAAEAAAAZAAMAAAACAAEAAAAaAAMAAAACAAEAAAAbAAMAAAACAAEAAAAcAAMAAAACAAEAAAAdAAMAAAACAAEAAAAeAAMAAAACAAEAAAAfAAMAAAACAAEAAAAgAAMAAAACAAEAAAAhAAMAAAADAAEAAAAiAAMAAAABAAIAAAAjAAMAAAABAAIAAAAkAAMAAAACAAIAAAAlAAMAAAACAAEAAAAmAAMAAAACAAEAAAAnAAMAAAACAAEAAAAoAAMAAAACAAEAAAABAAQAAAACAAEAAAACAAQAAAACAAAAAAADAAQAAAADAAAAAAAEAAQAAAADAAAAAAAFAAQAAAADAAAAAAAGAAQAAAADAAAAAAAHAAQAAAABAAEAAAAIAAQAAAACAAEAAAAJAAQAAAACAAEAAAAKAAQAAAACAAEAAAALAAQAAAACAAEAAAAMAAQAAAACAAEAAAANAAQAAAACAAEAAAAOAAQAAAACAAEAAAAPAAQAAAACAAEAAAAQAAQAAAACAAEAAAARAAQAAAADAAEAAAASAAQAAAABAAIAAAATAAQAAAABAAIAAAAUAAQAAAABAAIAAAAVAAQAAAACAAIAAAAWAAQAAAACAAEAAAAXAAQAAAACAAEAAAAYAAQAAAACAAEAAAAZAAQAAAACAAEAAAAaAAQAAAACAAEAAAAbAAQAAAACAAEAAAAcAAQAAAACAAEAAAAdAAQAAAACAAEAAAAeAAQAAAACAAEAAAAfAAQAAAACAAEAAAAgAAQAAAACAAEAAAAhAAQAAAADAAIAAAAiAAQAAAABAAMAAAAjAAQAAAADAAAAAAAkAAQAAAABAAEAAAAlAAQAAAACAAEAAAAmAAQAAAACAAEAAAAnAAQAAAACAAEAAAAoAAQAAAACAAEAAAABAAUAAAACAAEAAAACAAUAAAACAAEAAAADAAUAAAACAAEAAAAEAAUAAAACAAEAAAAFAAUAAAACAAEAAAAGAAUAAAACAAEAAAAHAAUAAAACAAEAAAAIAAUAAAACAAEAAAAJAAUAAAACAAEAAAAKAAUAAAACAAEAAAANAAUAAAACAAEAAAAOAAUAAAACAAEAAAAPAAUAAAACAAEAAAAQAAUAAAACAAEAAAARAAUAAAADAAIAAAASAAUAAAAAAAMAAAATAAUAAAAAAAMAAAAUAAUAAAAAAAMAAAAVAAUAAAABAAAAAAAWAAUAAAACAAEAAAAXAAUAAAACAAEAAAAYAAUAAAACAAEAAAAZAAUAAAACAAEAAAAaAAUAAAACAAEAAAAbAAUAAAACAAEAAAAcAAUAAAACAAEAAAAdAAUAAAACAAEAAAAeAAUAAAACAAEAAAAfAAUAAAACAAEAAAAgAAUAAAACAAEAAAAhAAUAAAADAAIAAAAiAAUAAAABAAAAAAAjAAUAAAACAAEAAAAkAAUAAAACAAEAAAAlAAUAAAACAAEAAAAmAAUAAAACAAEAAAAnAAUAAAACAAEAAAAoAAUAAAACAAEAAAANAAYAAAACAAEAAAAOAAYAAAACAAEAAAAPAAYAAAACAAEAAAAQAAYAAAACAAEAAAARAAYAAAADAAIAAAASAAYAAAAAAAMAAAATAAYAAAAAAAMAAAAUAAYAAAAAAAMAAAAVAAYAAAABAAAAAAAWAAYAAAACAAEAAAAXAAYAAAACAAEAAAAYAAYAAAACAAEAAAAbAAYAAAACAAEAAAAcAAYAAAACAAEAAAAdAAYAAAACAAEAAAAeAAYAAAACAAEAAAAfAAYAAAACAAEAAAAgAAYAAAACAAEAAAAhAAYAAAACAAAAAAAiAAYAAAABAAEAAAAjAAYAAAACAAEAAAAkAAYAAAACAAEAAAAlAAYAAAACAAEAAAAmAAYAAAACAAEAAAAnAAYAAAACAAEAAAAoAAYAAAACAAEAAAANAAcAAAACAAEAAAAOAAcAAAACAAEAAAAPAAcAAAACAAEAAAAQAAcAAAACAAEAAAARAAcAAAADAAIAAAASAAcAAAAAAAMAAAATAAcAAAAAAAMAAAAUAAcAAAAAAAMAAAAVAAcAAAABAAAAAAAWAAcAAAACAAEAAAAXAAcAAAACAAEAAAAYAAcAAAACAAEAAAAbAAcAAAACAAEAAAAcAAcAAAACAAEAAAAdAAcAAAACAAEAAAAeAAcAAAACAAEAAAAfAAcAAAACAAEAAAAgAAcAAAACAAEAAAAhAAcAAAACAAEAAAAiAAcAAAACAAEAAAAjAAcAAAACAAEAAAAkAAcAAAACAAEAAAAlAAcAAAACAAEAAAAmAAcAAAACAAEAAAAnAAcAAAACAAEAAAAoAAcAAAACAAEAAAAKAAgAAAACAAEAAAALAAgAAAACAAEAAAAMAAgAAAACAAEAAAANAAgAAAACAAEAAAAOAAgAAAACAAEAAAAPAAgAAAACAAEAAAAQAAgAAAACAAEAAAARAAgAAAACAAAAAAASAAgAAAADAAAAAAATAAgAAAADAAAAAAAUAAgAAAADAAAAAAAVAAgAAAABAAEAAAAWAAgAAAACAAEAAAAXAAgAAAACAAEAAAAYAAgAAAACAAEAAAAbAAgAAAACAAEAAAAcAAgAAAACAAEAAAAdAAgAAAACAAEAAAAeAAgAAAACAAEAAAAfAAgAAAACAAEAAAAgAAgAAAACAAEAAAAhAAgAAAACAAEAAAAiAAgAAAACAAEAAAAjAAgAAAACAAEAAAAkAAgAAAACAAEAAAAlAAgAAAACAAEAAAAmAAgAAAACAAEAAAAnAAgAAAACAAEAAAAoAAgAAAACAAEAAAABAAkAAAACAAEAAAACAAkAAAACAAEAAAADAAkAAAACAAEAAAAEAAkAAAACAAEAAAAFAAkAAAACAAEAAAAGAAkAAAACAAEAAAAKAAkAAAACAAEAAAALAAkAAAACAAEAAAAMAAkAAAACAAEAAAANAAkAAAACAAEAAAAOAAkAAAACAAEAAAAPAAkAAAACAAEAAAAQAAkAAAACAAEAAAARAAkAAAACAAEAAAASAAkAAAACAAEAAAATAAkAAAACAAEAAAAUAAkAAAACAAEAAAAVAAkAAAACAAEAAAAWAAkAAAACAAEAAAAXAAkAAAACAAEAAAAYAAkAAAACAAEAAAAbAAkAAAACAAEAAAAcAAkAAAACAAEAAAAdAAkAAAACAAEAAAAeAAkAAAACAAEAAAAfAAkAAAACAAEAAAAgAAkAAAACAAEAAAAhAAkAAAACAAEAAAAiAAkAAAACAAEAAAAjAAkAAAACAAEAAAAkAAkAAAACAAEAAAAlAAkAAAACAAEAAAAmAAkAAAACAAEAAAAnAAkAAAACAAEAAAAoAAkAAAACAAEAAAABAAoAAAACAAEAAAACAAoAAAACAAEAAAADAAoAAAACAAEAAAAEAAoAAAACAAEAAAAFAAoAAAACAAEAAAAGAAoAAAACAAEAAAABAAsAAAACAAEAAAACAAsAAAACAAEAAAADAAsAAAACAAEAAAAEAAsAAAACAAEAAAAFAAsAAAACAAEAAAAGAAsAAAACAAEAAAABAAwAAAACAAEAAAACAAwAAAACAAEAAAADAAwAAAACAAEAAAAEAAwAAAACAAEAAAAFAAwAAAACAAEAAAAGAAwAAAACAAEAAAAGAA0AAAACAAEAAAAUAA0AAAACAAEAAAAVAA0AAAACAAEAAAAWAA0AAAACAAEAAAAXAA0AAAACAAEAAAAYAA0AAAACAAEAAAAZAA0AAAACAAEAAAAaAA0AAAACAAEAAAAbAA0AAAACAAEAAAAcAA0AAAACAAEAAAAdAA0AAAACAAEAAAAeAA0AAAACAAEAAAAfAA0AAAACAAEAAAAgAA0AAAACAAEAAAAkAA0AAAACAAEAAAAlAA0AAAACAAEAAAAmAA0AAAACAAEAAAAnAA0AAAACAAEAAAAoAA0AAAACAAEAAAAGAA4AAAACAAEAAAAUAA4AAAACAAEAAAAVAA4AAAACAAEAAAAWAA4AAAACAAEAAAAXAA4AAAACAAEAAAAYAA4AAAACAAEAAAAZAA4AAAACAAEAAAAaAA4AAAACAAEAAAAbAA4AAAACAAEAAAAcAA4AAAACAAEAAAAdAA4AAAACAAEAAAAeAA4AAAACAAEAAAAfAA4AAAACAAEAAAAgAA4AAAACAAEAAAAkAA4AAAACAAEAAAAlAA4AAAACAAEAAAAmAA4AAAACAAEAAAAnAA4AAAACAAEAAAAoAA4AAAACAAEAAAAGAA8AAAACAAEAAAAUAA8AAAACAAEAAAAVAA8AAAACAAEAAAAWAA8AAAACAAEAAAAXAA8AAAACAAEAAAAYAA8AAAACAAEAAAAZAA8AAAACAAEAAAAaAA8AAAACAAEAAAAbAA8AAAACAAEAAAAcAA8AAAACAAEAAAAdAA8AAAACAAEAAAAeAA8AAAACAAEAAAAfAA8AAAACAAEAAAAgAA8AAAACAAEAAAAkAA8AAAACAAEAAAAlAA8AAAACAAEAAAAmAA8AAAACAAEAAAAnAA8AAAACAAEAAAAoAA8AAAACAAEAAAAGABAAAAACAAEAAAAUABAAAAACAAEAAAAVABAAAAACAAEAAAAWABAAAAACAAEAAAAXABAAAAACAAEAAAAYABAAAAACAAEAAAAZABAAAAACAAEAAAAaABAAAAACAAEAAAAbABAAAAACAAEAAAAcABAAAAACAAEAAAAdABAAAAACAAEAAAAeABAAAAACAAEAAAAfABAAAAACAAEAAAAgABAAAAACAAEAAAAkABAAAAACAAEAAAAlABAAAAACAAEAAAAmABAAAAACAAEAAAAnABAAAAACAAEAAAAoABAAAAACAAEAAAAGABEAAAACAAEAAAAUABEAAAACAAEAAAAVABEAAAADAAEAAAAWABEAAAACAAIAAAAXABEAAAACAAEAAAAYABEAAAACAAEAAAAZABEAAAACAAEAAAAaABEAAAACAAEAAAAbABEAAAACAAEAAAAcABEAAAACAAEAAAAdABEAAAACAAEAAAAeABEAAAACAAEAAAAfABEAAAACAAEAAAAgABEAAAACAAEAAAAkABEAAAACAAEAAAAlABEAAAACAAEAAAAmABEAAAACAAEAAAAnABEAAAACAAEAAAAoABEAAAACAAEAAAAGABIAAAACAAEAAAAUABIAAAADAAEAAAAVABIAAAADAAMAAAAWABIAAAABAAAAAAAXABIAAAACAAEAAAAYABIAAAACAAEAAAAZABIAAAACAAEAAAAaABIAAAACAAEAAAAbABIAAAACAAEAAAAcABIAAAACAAEAAAAdABIAAAACAAEAAAAeABIAAAACAAEAAAAfABIAAAACAAEAAAAgABIAAAACAAEAAAAkABIAAAACAAEAAAAlABIAAAACAAEAAAAmABIAAAACAAEAAAAnABIAAAACAAEAAAAoABIAAAACAAEAAAAGABMAAAACAAEAAAAHABMAAAACAAEAAAAIABMAAAACAAEAAAAJABMAAAACAAEAAAAKABMAAAACAAEAAAALABMAAAACAAEAAAAMABMAAAACAAEAAAANABMAAAACAAEAAAAOABMAAAACAAEAAAAPABMAAAACAAEAAAAQABMAAAACAAEAAAATABMAAAACAAEAAAAUABMAAAACAAAAAAAVABMAAAADAAAAAAAWABMAAAABAAEAAAAXABMAAAACAAEAAAAYABMAAAACAAEAAAAZABMAAAACAAEAAAAaABMAAAACAAEAAAAbABMAAAACAAEAAAAcABMAAAACAAEAAAAdABMAAAACAAEAAAAeABMAAAACAAEAAAAfABMAAAACAAEAAAAgABMAAAACAAEAAAAkABMAAAACAAEAAAAlABMAAAACAAEAAAAmABMAAAACAAEAAAAnABMAAAACAAEAAAAoABMAAAACAAEAAAAGABQAAAACAAEAAAAHABQAAAACAAEAAAAIABQAAAACAAEAAAAJABQAAAACAAEAAAAKABQAAAACAAEAAAALABQAAAACAAEAAAAMABQAAAACAAEAAAANABQAAAACAAEAAAAOABQAAAACAAEAAAAPABQAAAACAAEAAAAQABQAAAACAAEAAAARABQAAAACAAEAAAASABQAAAACAAEAAAATABQAAAACAAEAAAAUABQAAAACAAEAAAAVABQAAAACAAEAAAAWABQAAAACAAEAAAAXABQAAAACAAEAAAAYABQAAAACAAEAAAAZABQAAAACAAEAAAAaABQAAAACAAEAAAAbABQAAAACAAEAAAAcABQAAAACAAEAAAAdABQAAAACAAEAAAAeABQAAAACAAEAAAAfABQAAAACAAEAAAAgABQAAAACAAEAAAAhABQAAAACAAEAAAAiABQAAAACAAEAAAAjABQAAAACAAEAAAAkABQAAAACAAEAAAAlABQAAAACAAEAAAAmABQAAAACAAEAAAAnABQAAAACAAEAAAAoABQAAAACAAEAAAABABUAAAACAAEAAAACABUAAAACAAEAAAADABUAAAACAAEAAAAEABUAAAACAAEAAAAFABUAAAACAAEAAAAGABUAAAACAAEAAAAHABUAAAACAAEAAAAIABUAAAACAAEAAAAJABUAAAACAAEAAAAKABUAAAACAAEAAAALABUAAAACAAEAAAAMABUAAAACAAEAAAANABUAAAACAAEAAAAOABUAAAACAAEAAAAPABUAAAACAAEAAAAQABUAAAACAAEAAAARABUAAAACAAEAAAASABUAAAACAAEAAAATABUAAAACAAEAAAAUABUAAAACAAEAAAAVABUAAAACAAEAAAAWABUAAAACAAEAAAAXABUAAAACAAEAAAAYABUAAAACAAEAAAAZABUAAAACAAEAAAAaABUAAAACAAEAAAAbABUAAAACAAEAAAAcABUAAAACAAEAAAAdABUAAAACAAEAAAAeABUAAAACAAEAAAAfABUAAAACAAEAAAAgABUAAAACAAEAAAAhABUAAAACAAEAAAAiABUAAAACAAEAAAAjABUAAAACAAEAAAAkABUAAAACAAEAAAAlABUAAAACAAEAAAAmABUAAAACAAEAAAAnABUAAAACAAEAAAAoABUAAAACAAEAAAALAAUAAQABAAMAAAAMAAUAAQAAAAAAAAABAAYAAQABAAMAAAACAAYAAQADAAAAAAADAAYAAQADAAAAAAAEAAYAAQADAAAAAAAFAAYAAQADAAAAAAAGAAYAAQADAAAAAAAHAAYAAQADAAAAAAAIAAYAAQADAAAAAAAJAAYAAQADAAAAAAAKAAYAAQADAAAAAAALAAYAAQABAAEAAAAMAAYAAQADAAIAAAAZAAYAAQABAAMAAAAaAAYAAQAAAAAAAAABAAcAAQABAAAAAAADAAcAAQACAAEAAAAEAAcAAQACAAEAAAAFAAcAAQACAAEAAAAGAAcAAQACAAEAAAAHAAcAAQACAAEAAAAIAAcAAQACAAEAAAAJAAcAAQADAAEAAAAKAAcAAQABAAIAAAALAAcAAQABAAIAAAAMAAcAAQADAAMAAAAZAAcAAQABAAAAAAAaAAcAAQADAAIAAAABAAgAAQAAAAIAAAACAAgAAQABAAIAAAADAAgAAQABAAIAAAAEAAgAAQABAAIAAAAFAAgAAQABAAIAAAAGAAgAAQABAAIAAAAHAAgAAQACAAIAAAAIAAgAAQACAAEAAAAJAAgAAQADAAIAAAAZAAgAAQABAAAAAAAaAAgAAQADAAIAAAAHAAkAAQABAAAAAAAIAAkAAQACAAEAAAAJAAkAAQADAAIAAAAZAAkAAQABAAAAAAAaAAkAAQADAAIAAAAHAAoAAQABAAAAAAAIAAoAAQACAAEAAAAJAAoAAQACAAAAAAAKAAoAAQADAAAAAAALAAoAAQADAAAAAAAMAAoAAQADAAAAAAANAAoAAQADAAAAAAAOAAoAAQADAAAAAAAPAAoAAQADAAAAAAAQAAoAAQADAAAAAAARAAoAAQADAAAAAAASAAoAAQADAAAAAAATAAoAAQADAAAAAAAUAAoAAQADAAAAAAAVAAoAAQADAAAAAAAWAAoAAQADAAAAAAAXAAoAAQADAAAAAAAYAAoAAQADAAAAAAAZAAoAAQABAAEAAAAaAAoAAQACAAAAAAAbAAoAAQADAAAAAAAcAAoAAQADAAAAAAAdAAoAAQADAAAAAAAeAAoAAQADAAAAAAAfAAoAAQADAAAAAAAgAAoAAQADAAAAAAAhAAoAAQADAAAAAAAiAAoAAQADAAAAAAAjAAoAAQADAAAAAAAkAAoAAQADAAAAAAAlAAoAAQADAAAAAAAmAAoAAQADAAAAAAAnAAoAAQADAAAAAAAoAAoAAQADAAAAAAAHAAsAAQABAAAAAAAIAAsAAQACAAEAAAAJAAsAAQACAAEAAAAKAAsAAQACAAEAAAALAAsAAQACAAEAAAAMAAsAAQACAAEAAAANAAsAAQACAAEAAAAOAAsAAQACAAEAAAAPAAsAAQACAAEAAAAQAAsAAQACAAEAAAARAAsAAQACAAEAAAASAAsAAQACAAEAAAATAAsAAQACAAEAAAAUAAsAAQACAAEAAAAVAAsAAQACAAEAAAAWAAsAAQACAAEAAAAXAAsAAQACAAEAAAAYAAsAAQACAAEAAAAZAAsAAQACAAEAAAAaAAsAAQACAAEAAAAbAAsAAQACAAEAAAAcAAsAAQACAAEAAAAdAAsAAQACAAEAAAAeAAsAAQACAAEAAAAfAAsAAQACAAEAAAAgAAsAAQACAAEAAAAhAAsAAQACAAEAAAAiAAsAAQACAAEAAAAjAAsAAQACAAEAAAAkAAsAAQACAAEAAAAlAAsAAQACAAEAAAAmAAsAAQACAAEAAAAnAAsAAQACAAEAAAAoAAsAAQACAAEAAAAHAAwAAQABAAAAAAAIAAwAAQACAAEAAAAJAAwAAQADAAEAAAAKAAwAAQABAAIAAAALAAwAAQABAAIAAAAMAAwAAQABAAIAAAANAAwAAQABAAIAAAAOAAwAAQABAAIAAAAPAAwAAQABAAIAAAAQAAwAAQABAAIAAAARAAwAAQABAAIAAAASAAwAAQACAAIAAAATAAwAAQADAAEAAAAUAAwAAQABAAIAAAAVAAwAAQABAAIAAAAWAAwAAQABAAIAAAAXAAwAAQABAAIAAAAYAAwAAQABAAIAAAAZAAwAAQABAAIAAAAaAAwAAQABAAIAAAAbAAwAAQABAAIAAAAcAAwAAQABAAIAAAAdAAwAAQABAAIAAAAeAAwAAQABAAIAAAAfAAwAAQABAAIAAAAgAAwAAQABAAIAAAAhAAwAAQACAAIAAAAiAAwAAQACAAEAAAAjAAwAAQADAAEAAAAkAAwAAQABAAIAAAAlAAwAAQABAAIAAAAmAAwAAQABAAIAAAAnAAwAAQABAAIAAAAoAAwAAQABAAIAAAAHAA0AAQABAAAAAAAIAA0AAQACAAEAAAAJAA0AAQADAAIAAAASAA0AAQABAAAAAAATAA0AAQADAAIAAAAhAA0AAQABAAAAAAAiAA0AAQACAAEAAAAjAA0AAQADAAIAAAAHAA4AAQABAAAAAAAIAA4AAQACAAEAAAAJAA4AAQADAAIAAAASAA4AAQABAAAAAAATAA4AAQADAAIAAAAhAA4AAQABAAAAAAAiAA4AAQACAAEAAAAjAA4AAQADAAIAAAAHAA8AAQABAAAAAAAIAA8AAQACAAEAAAAJAA8AAQADAAIAAAASAA8AAQABAAAAAAATAA8AAQADAAIAAAAhAA8AAQABAAAAAAAiAA8AAQACAAEAAAAjAA8AAQADAAIAAAAHABAAAQABAAAAAAAIABAAAQACAAEAAAAJABAAAQADAAIAAAASABAAAQABAAAAAAATABAAAQADAAIAAAAhABAAAQABAAAAAAAiABAAAQACAAEAAAAjABAAAQADAAIAAAAHABEAAQABAAAAAAAIABEAAQACAAEAAAAJABEAAQADAAIAAAARABEAAQABAAMAAAASABEAAQABAAEAAAATABEAAQADAAIAAAAhABEAAQABAAAAAAAiABEAAQACAAEAAAAjABEAAQADAAIAAAAHABIAAQAAAAIAAAAIABIAAQABAAIAAAAJABIAAQADAAMAAAARABIAAQABAAAAAAASABIAAQADAAEAAAATABIAAQADAAMAAAAhABIAAQABAAAAAAAiABIAAQACAAEAAAAjABIAAQADAAIAAAARABMAAQAAAAIAAAASABMAAQADAAMAAAAhABMAAQAAAAIAAAAiABMAAQABAAIAAAAjABMAAQADAAMAAAAPAAEAAgABAAMAAAAQAAEAAgADAAAAAAARAAEAAgAAAAAAAAAPAAIAAgABAAAAAAAQAAIAAgACAAEAAAARAAIAAgADAAIAAAAPAAMAAgAAAAIAAAAQAAMAAgABAAIAAAARAAMAAgADAAMAAAABAA0AAgABAAMAAAACAA0AAgADAAAAAAADAA0AAgADAAAAAAAEAA0AAgADAAAAAAAFAA0AAgAAAAAAAAAKAA0AAgABAAMAAAALAA0AAgADAAAAAAAMAA0AAgADAAAAAAANAA0AAgADAAAAAAAOAA0AAgADAAAAAAAPAA0AAgADAAAAAAAQAA0AAgADAAAAAAARAA0AAgAAAAAAAAABAA4AAgABAAAAAAACAA4AAgACAAEAAAADAA4AAgACAAEAAAAEAA4AAgACAAEAAAAFAA4AAgADAAIAAAAKAA4AAgABAAAAAAALAA4AAgACAAEAAAAMAA4AAgACAAEAAAANAA4AAgACAAEAAAAOAA4AAgACAAEAAAAPAA4AAgACAAEAAAAQAA4AAgACAAEAAAARAA4AAgADAAIAAAABAA8AAgABAAAAAAACAA8AAgACAAEAAAADAA8AAgACAAEAAAAEAA8AAgACAAEAAAAFAA8AAgADAAIAAAAKAA8AAgABAAAAAAALAA8AAgACAAEAAAAMAA8AAgACAAEAAAANAA8AAgACAAEAAAAOAA8AAgACAAEAAAAPAA8AAgACAAEAAAAQAA8AAgACAAEAAAARAA8AAgADAAIAAAABABAAAgABAAAAAAACABAAAgACAAEAAAADABAAAgACAAEAAAAEABAAAgACAAEAAAAFABAAAgADAAIAAAAKABAAAgABAAAAAAALABAAAgACAAEAAAAMABAAAgACAAEAAAANABAAAgACAAEAAAAOABAAAgACAAEAAAAPABAAAgACAAEAAAAQABAAAgADAAEAAAARABAAAgADAAMAAAABABEAAgABAAAAAAACABEAAgACAAEAAAADABEAAgACAAEAAAAEABEAAgACAAEAAAAFABEAAgADAAIAAAAKABEAAgABAAAAAAALABEAAgACAAEAAAAMABEAAgACAAEAAAANABEAAgACAAEAAAAOABEAAgACAAEAAAAPABEAAgACAAEAAAAQABEAAgADAAIAAAABABIAAgABAAAAAAACABIAAgACAAEAAAADABIAAgACAAEAAAAEABIAAgACAAEAAAAFABIAAgADAAIAAAAKABIAAgAAAAIAAAALABIAAgABAAIAAAAMABIAAgABAAIAAAANABIAAgABAAIAAAAOABIAAgABAAIAAAAPABIAAgABAAIAAAAQABIAAgADAAMAAAABABMAAgABAAAAAAACABMAAgACAAEAAAADABMAAgACAAEAAAAEABMAAgACAAEAAAAFABMAAgADAAIAAAABABQAAgAAAAIAAAACABQAAgABAAIAAAADABQAAgABAAIAAAAEABQAAgABAAIAAAAFABQAAgADAAMAAAACAAcAAQACAAEAAAA=")
+tile_set = SubResource("TileSet_0os8d")
+metadata/pixellab_dual_grid_terrain = true
